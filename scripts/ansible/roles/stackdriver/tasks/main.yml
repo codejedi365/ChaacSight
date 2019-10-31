@@ -1,0 +1,28 @@
+---
+# Google Stackdriver installation
+
+- name: Create credentials location
+  file: 
+    path: /etc/google/auth
+    state: directory
+    mode: "0774"
+  register: default_app_credential_dir
+
+- name: Install application default credentials
+  copy:
+    src: "{{ host_vars['localhost']['credentials_file'] }}"
+    dest: "{{ default_app_credential_dir.dest }}/application_default_credentials.json"
+    mode: "0440"
+    
+- name: Install stackdriver logging agent
+  script: install-logging-agent.sh
+  args:
+    executable: bash
+  when: log_agent == true
+
+- name: Install stackdriver monitoring agent
+  script: install-monitoring-agent.sh
+  args:
+    executable: bash
+  when: sys_agent == true
+

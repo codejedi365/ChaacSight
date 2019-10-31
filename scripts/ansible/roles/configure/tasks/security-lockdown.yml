@@ -1,0 +1,15 @@
+---
+# configure
+- name: Lock root user account
+  command: passwd --delete --lock root
+
+- name: Enable persistent log journal
+  file: 
+    path: "/var/log/journal"
+    state: directory
+    owner: root
+    group: systemd-journal
+    mode: 2755
+- service: name=systemd-journald state=restarted
+
+# iptables setup?

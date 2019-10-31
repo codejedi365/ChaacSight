@@ -1,0 +1,1754 @@
+{
+    "ALBEMARLE, NC": {
+        "data_source_sha1": "b68a7ef1956771fa647c1fd908aeee89d66317e7",
+        "exogen": {
+            "CHERAW, SC": {
+                "data_source_sha1": "43483c25454285e1438452afdeee26e8d7281276",
+                "exmae": 1.830673411
+            },
+            "CHERAW, SC|FORT MILL 4 NW, SC": {
+                "data_source_sha1": "958008326faa88e29d175fe0188cdb47f6c81af8",
+                "exmae": 1.948374964
+            },
+            "CHERAW, SC|PAGELAND 9.0 WNW, SC": {
+                "data_source_sha1": "500a0fc35637e6db6c4737e7376574af7637dfa9",
+                "exmae": 2.040195482
+            },
+            "CHERAW, SC|PAGELAND 9.0 WNW, SC|FORT MILL 4 NW, SC": {
+                "data_source_sha1": "3de7ab4ada13a9760dccb2ad27277f669cc75217",
+                "exmae": 2.073942465
+            },
+            "CHESTERFIELD 3 E, SC": {
+                "data_source_sha1": "b96a753f02f72055cf6128a249066718b60367bd",
+                "exmae": 1.942020681
+            },
+            "CHESTERFIELD 3 E, SC|CHERAW, SC": {
+                "data_source_sha1": "6157220fa0eadcddcb09fa6e7efc1723c88c27e0",
+                "exmae": 1.978664998
+            },
+            "CHESTERFIELD 3 E, SC|CHERAW, SC|FORT MILL 4 NW, SC": {
+                "data_source_sha1": "12df5cf69a9778d45a859b9a0182eb6417b8a9f7",
+                "exmae": 1.974485093
+            },
+            "CHESTERFIELD 3 E, SC|CHERAW, SC|PAGELAND 9.0 WNW, SC": {
+                "data_source_sha1": "d468dd99dcb42c132efc5422c88496da5f30b091",
+                "exmae": 2.052849408
+            },
+            "CHESTERFIELD 3 E, SC|CHERAW, SC|PAGELAND 9.0 WNW, SC|FORT MILL 4 NW, SC": {
+                "data_source_sha1": "22d7fb147bf523c28fcbd54621a7abb463e25fc9",
+                "exmae": 2.083257582
+            },
+            "CHESTERFIELD 3 E, SC|FORT MILL 4 NW, SC": {
+                "data_source_sha1": "83b6d2b670c8abc58f5ccde3d529cb0597b5f8f9",
+                "exmae": 1.981879235
+            },
+            "CHESTERFIELD 3 E, SC|PAGELAND 9.0 WNW, SC": {
+                "data_source_sha1": "67588f8955fe0633672073054df72728d3529afe",
+                "exmae": 2.032507442
+            },
+            "CHESTERFIELD 3 E, SC|PAGELAND 9.0 WNW, SC|FORT MILL 4 NW, SC": {
+                "data_source_sha1": "20124dbaebc2338a9eda770b148e0cdf7f259891",
+                "exmae": 2.043283929
+            },
+            "FORT MILL 4 NW, SC": {
+                "data_source_sha1": "42e692135d97e0bbd63499a34bf5b34eaf0ca38e",
+                "exmae": 1.788067443
+            },
+            "PAGELAND 9.0 WNW, SC": {
+                "data_source_sha1": "aa3e54288d466a656553c2e21f4e95a8b89a6c78",
+                "exmae": 2.027484195
+            },
+            "PAGELAND 9.0 WNW, SC|FORT MILL 4 NW, SC": {
+                "data_source_sha1": "3831c9eb927869fdc988f585e1e8feb45edc6efe",
+                "exmae": 2.04230102
+            }
+        },
+        "keymae": 1.590523945
+    },
+    "ARCOLA, NC": {
+        "data_source_sha1": "a8975dce8cf2d63f5257d01f117efdee9c17cf2b",
+        "exogen": {
+            "EMPORIA, VA": {
+                "data_source_sha1": "1e6b2c123224017f854a62cef7c630ecf693e009",
+                "exmae": 1.864038813
+            },
+            "JOHN KERR DAM, VA": {
+                "data_source_sha1": "008e6177b9cd930f87402dd5ef2d831cd0f70119",
+                "exmae": 1.798076898
+            },
+            "JOHN KERR DAM, VA|EMPORIA, VA": {
+                "data_source_sha1": "cded9288914b8e1b269d1588329d42481689cc6e",
+                "exmae": 1.83854245
+            }
+        },
+        "keymae": 1.541046192
+    },
+    "ASHEVILLE AIRPORT, NC": {
+        "data_source_sha1": "6b38ce41d8945ab24a571779666981fadd0f506c",
+        "exogen": {
+            "CAESARS HEAD, SC": {
+                "data_source_sha1": "009dd711216f5b350fc7d5cc2c3e263aa6abf5fb",
+                "exmae": 2.563164493
+            },
+            "CAESARS HEAD, SC|CLEVELAND 3S, SC": {
+                "data_source_sha1": "f8aff8a3d06727b5e66032ceecddf67c46051da1",
+                "exmae": 2.434673438
+            },
+            "CLEVELAND 3S, SC": {
+                "data_source_sha1": "ec63d033b5549b3311a2711ad5aa92b4f5105e8d",
+                "exmae": 2.478962205
+            }
+        },
+        "keymae": 2.093730675
+    },
+    "BANNER ELK, NC": {
+        "data_source_sha1": "b89d74f45db9cc58a21d031441be5c9082b7d20e",
+        "exogen": {
+            "ELIZABETHTON, TN": {
+                "data_source_sha1": "5873d53d75c1addd503e6bc4797f6304c6bba813",
+                "exmae": 2.252347194
+            },
+            "ELIZABETHTON, TN|ERWIN 1 W, TN": {
+                "data_source_sha1": "eba387432a7ce1296e56b9f1643203411ff06b1a",
+                "exmae": 2.308766315
+            },
+            "ELIZABETHTON, TN|ERWIN 1 W, TN|ROAN MOUNTAIN 3SW, TN": {
+                "data_source_sha1": "398d918b90139e775aefe4971c4db7fa91b69d98",
+                "exmae": 2.518269727
+            },
+            "ELIZABETHTON, TN|ROAN MOUNTAIN 3SW, TN": {
+                "data_source_sha1": "2f49a7b01af91b023e73d938e5aaaa15b78741c1",
+                "exmae": 2.499294046
+            },
+            "ERWIN 1 W, TN": {
+                "data_source_sha1": "a42f839d575f4b5f595ad09ddd05739c73a9a8a2",
+                "exmae": 2.333512659
+            },
+            "ERWIN 1 W, TN|ROAN MOUNTAIN 3SW, TN": {
+                "data_source_sha1": "139a14e3d41ee1b437f30a4676792b1b4866da20",
+                "exmae": 2.501094709
+            },
+            "ROAN MOUNTAIN 3SW, TN": {
+                "data_source_sha1": "74515a0df40e417d19305924953cc4767b218aaa",
+                "exmae": 2.561921928
+            }
+        },
+        "keymae": 2.05316405
+    },
+    "BEECH MOUNTAIN, NC": {
+        "data_source_sha1": "d441b62943409d1e39d03b87f3e80d09fe733158",
+        "exogen": {
+            "BRISTOL AP, TN": {
+                "data_source_sha1": "9f0cf36a44d035ebbb37428ec9161984409a8375",
+                "exmae": 2.339543259
+            },
+            "BRISTOL AP, TN|ELIZABETHTON, TN": {
+                "data_source_sha1": "76b42b262ffe4d60ea98683da255256a87e3e03b",
+                "exmae": 2.306481788
+            },
+            "BRISTOL AP, TN|ELIZABETHTON, TN|ERWIN 1 W, TN": {
+                "data_source_sha1": "b20e2ab089e1bdbe43bb8afb5535d592ef3f60ab",
+                "exmae": 2.361046051
+            },
+            "BRISTOL AP, TN|ELIZABETHTON, TN|ERWIN 1 W, TN|ROAN MOUNTAIN 3SW, TN": {
+                "data_source_sha1": "e7d0a21c8b15f5da68fad380da1222f9c535b9b9",
+                "exmae": 2.528240694
+            },
+            "BRISTOL AP, TN|ELIZABETHTON, TN|ROAN MOUNTAIN 3SW, TN": {
+                "data_source_sha1": "0367ad69e34bf86320228222e8b763abb2485c30",
+                "exmae": 2.47719883
+            },
+            "BRISTOL AP, TN|ERWIN 1 W, TN": {
+                "data_source_sha1": "c5bbc7a51e8f183748708919c1be85b5e0f1f43d",
+                "exmae": 2.361161326
+            },
+            "BRISTOL AP, TN|ERWIN 1 W, TN|ROAN MOUNTAIN 3SW, TN": {
+                "data_source_sha1": "76b0888fa709ccfe61803d3c833fbc90bd016faf",
+                "exmae": 2.532181365
+            },
+            "BRISTOL AP, TN|ROAN MOUNTAIN 3SW, TN": {
+                "data_source_sha1": "72aaf5d75ff7aee5ffe817276050ee2099059297",
+                "exmae": 2.504918093
+            },
+            "ELIZABETHTON, TN": {
+                "data_source_sha1": "5873d53d75c1addd503e6bc4797f6304c6bba813",
+                "exmae": 2.247700621
+            },
+            "ELIZABETHTON, TN|ERWIN 1 W, TN": {
+                "data_source_sha1": "eba387432a7ce1296e56b9f1643203411ff06b1a",
+                "exmae": 2.330392132
+            },
+            "ELIZABETHTON, TN|ERWIN 1 W, TN|ROAN MOUNTAIN 3SW, TN": {
+                "data_source_sha1": "398d918b90139e775aefe4971c4db7fa91b69d98",
+                "exmae": 2.453645782
+            },
+            "ELIZABETHTON, TN|ROAN MOUNTAIN 3SW, TN": {
+                "data_source_sha1": "2f49a7b01af91b023e73d938e5aaaa15b78741c1",
+                "exmae": 2.490922012
+            },
+            "ERWIN 1 W, TN": {
+                "data_source_sha1": "a42f839d575f4b5f595ad09ddd05739c73a9a8a2",
+                "exmae": 2.337604248
+            },
+            "ERWIN 1 W, TN|ROAN MOUNTAIN 3SW, TN": {
+                "data_source_sha1": "139a14e3d41ee1b437f30a4676792b1b4866da20",
+                "exmae": 2.496745011
+            },
+            "ROAN MOUNTAIN 3SW, TN": {
+                "data_source_sha1": "74515a0df40e417d19305924953cc4767b218aaa",
+                "exmae": 2.543783584
+            }
+        },
+        "keymae": 2.194242551
+    },
+    "BOONE 1 SE, NC": {
+        "data_source_sha1": "456a6d329d0a4ce9d6e6273930d080669e4a7adb",
+        "exogen": {
+            "ROAN MOUNTAIN 3SW, TN": {
+                "data_source_sha1": "74515a0df40e417d19305924953cc4767b218aaa",
+                "exmae": 3.115040635
+            }
+        },
+        "keymae": 2.480965708
+    },
+    "BREVARD, NC": {
+        "data_source_sha1": "f0a1d74e50575c020d87f71c592684f05281f301",
+        "exogen": {
+            "CAESARS HEAD, SC": {
+                "data_source_sha1": "009dd711216f5b350fc7d5cc2c3e263aa6abf5fb",
+                "exmae": 3.412555439
+            },
+            "CAESARS HEAD, SC|CLEVELAND 3S, SC": {
+                "data_source_sha1": "f8aff8a3d06727b5e66032ceecddf67c46051da1",
+                "exmae": 3.459599464
+            },
+            "CLEVELAND 3S, SC": {
+                "data_source_sha1": "ec63d033b5549b3311a2711ad5aa92b4f5105e8d",
+                "exmae": 3.408806703
+            },
+            "PICKENS AREA, SC": {
+                "data_source_sha1": "7a53b8c9a72bdac6f4d96b53428c33bb809bb77f",
+                "exmae": 3.233168557
+            },
+            "PICKENS AREA, SC|CAESARS HEAD, SC": {
+                "data_source_sha1": "35a1bc85a1cdfb1d396858fecf4a808fde5a05d7",
+                "exmae": 3.340756683
+            },
+            "PICKENS AREA, SC|CAESARS HEAD, SC|CLEVELAND 3S, SC": {
+                "data_source_sha1": "7c6176ba88e235bea025051d1437d17bdc8d7bb9",
+                "exmae": 3.427604065
+            },
+            "PICKENS AREA, SC|CLEVELAND 3S, SC": {
+                "data_source_sha1": "6060dad426f0b51858aa7e4fcd23234ec9ec51d6",
+                "exmae": 3.328312051
+            }
+        },
+        "keymae": 3.175838317
+    },
+    "BRYSON CITY 4, NC": {
+        "data_source_sha1": "648b45f0bbd7f92e33f138761222134d31acc1b2",
+        "exogen": {
+            "GATLINBURG 2 SW, TN": {
+                "data_source_sha1": "4bf658300dc14be31ce10e0ef59b7d44c3041946",
+                "exmae": 2.163716858
+            },
+            "GATLINBURG 2 SW, TN|MT LECONTE, TN": {
+                "data_source_sha1": "00d3bc240da365b1e855065ceb3f03c0131fee6f",
+                "exmae": 2.63262332
+            },
+            "GATLINBURG 2 SW, TN|MT LECONTE, TN|NEWFOUND GAP, TN": {
+                "data_source_sha1": "0e9b08eb36ce6ed30706625a0910191c4dfffa49",
+                "exmae": 2.347310802
+            },
+            "GATLINBURG 2 SW, TN|MT LECONTE, TN|NEWFOUND GAP, TN|TOWNSEND 5S, TN": {
+                "data_source_sha1": "b3beed2ebfbc3b398b113f08d30085f551b3475f",
+                "exmae": 2.355658941
+            },
+            "GATLINBURG 2 SW, TN|MT LECONTE, TN|TOWNSEND 5S, TN": {
+                "data_source_sha1": "9e13a89ce77cc12d036fe83dd6ce602ad86072f0",
+                "exmae": 2.386734201
+            },
+            "GATLINBURG 2 SW, TN|NEWFOUND GAP, TN": {
+                "data_source_sha1": "aaaad8ccb93c3cf823c372c4ef6b5b200c6bc3be",
+                "exmae": 2.277550367
+            },
+            "GATLINBURG 2 SW, TN|NEWFOUND GAP, TN|TOWNSEND 5S, TN": {
+                "data_source_sha1": "9ac0f28ce9662b6c1bd9f17a414169377a68f12c",
+                "exmae": 2.314557504
+            },
+            "GATLINBURG 2 SW, TN|TOWNSEND 5S, TN": {
+                "data_source_sha1": "8dcb6a9d961577c1796aa1361ad51dddcd9722d9",
+                "exmae": 2.278822925
+            },
+            "MT LECONTE, TN": {
+                "data_source_sha1": "c66a13b50a9c2b15f5f2fc6a1c2db3c0a8eb04a7",
+                "exmae": 2.359118001
+            },
+            "MT LECONTE, TN|NEWFOUND GAP, TN": {
+                "data_source_sha1": "6739e12ffcc2985603bc9012f7596c1a0f65c36d",
+                "exmae": 2.362815478
+            },
+            "MT LECONTE, TN|NEWFOUND GAP, TN|TOWNSEND 5S, TN": {
+                "data_source_sha1": "12c9c60636ec7117d90711ea85aa2d7c2f6f9182",
+                "exmae": 2.363589558
+            },
+            "MT LECONTE, TN|TOWNSEND 5S, TN": {
+                "data_source_sha1": "04c6b2ba0fe923a3d526fe2c14b9418fd998aa23",
+                "exmae": 2.432202733
+            },
+            "NEWFOUND GAP, TN": {
+                "data_source_sha1": "d9ec96942819121b6314196a0b572343055aa2c6",
+                "exmae": 2.346620005
+            },
+            "NEWFOUND GAP, TN|TOWNSEND 5S, TN": {
+                "data_source_sha1": "d2d05f27e1319d3a8157e11ea4cc2c4161f949d2",
+                "exmae": 2.348451644
+            },
+            "TOWNSEND 5S, TN": {
+                "data_source_sha1": "1149dcafcd4d66861c6a424f94a76104b17efd02",
+                "exmae": 2.301169949
+            }
+        },
+        "keymae": 2.02307985
+    },
+    "BURLINGTON, NC": {
+        "data_source_sha1": "c21afd8f4b55a10e74aa2cb8c144a402b26cfcae",
+        "exogen": {
+            "CHATHAM, VA": {
+                "data_source_sha1": "db48bbfb387660ce5739decff5cc2a68f953509f",
+                "exmae": 1.246969975
+            },
+            "CHATHAM, VA|MARTINSVILLE FILTER PLANT, VA": {
+                "data_source_sha1": "e929130788bdf1b628f674691d754bdd1987748b",
+                "exmae": 1.283620255
+            },
+            "CHATHAM, VA|MARTINSVILLE FILTER PLANT, VA|SOUTH BOSTON, VA": {
+                "data_source_sha1": "57022fcfdd0c7dc6572a23963908c3cfd87e5b3b",
+                "exmae": 1.463874758
+            },
+            "CHATHAM, VA|SOUTH BOSTON, VA": {
+                "data_source_sha1": "b6ea72052dd6c65bcb403202aae67687cde49b08",
+                "exmae": 1.285531366
+            },
+            "MARTINSVILLE FILTER PLANT, VA": {
+                "data_source_sha1": "34d95022a76d7e2f8313480da3e3c7976a5912c4",
+                "exmae": 1.242664607
+            },
+            "MARTINSVILLE FILTER PLANT, VA|SOUTH BOSTON, VA": {
+                "data_source_sha1": "41fea18e4bcd5c327f42ca51436ba564d7f86f9b",
+                "exmae": 1.391157781
+            },
+            "SOUTH BOSTON, VA": {
+                "data_source_sha1": "36148f61c85bd0e5321b101a36de35396e576d44",
+                "exmae": 1.217943571
+            }
+        },
+        "keymae": 0.788801135
+    },
+    "CASAR, NC": {
+        "data_source_sha1": "a2e368debbce126cb6d591f76979a965eee0e7a0",
+        "exogen": {
+            "CHESNEE 7 WSW, SC": {
+                "data_source_sha1": "65fba7fe07dd23fc611699c5eae01a2c5c96bdb8",
+                "exmae": 1.966493288
+            },
+            "CHESNEE 7 WSW, SC|GAFFNEY 6 E, SC": {
+                "data_source_sha1": "45ed473b68f998a1b7f7b0c4b950b5caaa2c4324",
+                "exmae": 1.910446604
+            },
+            "GAFFNEY 6 E, SC": {
+                "data_source_sha1": "850f46ecb6bef05fbda213107c7801d959ec278a",
+                "exmae": 1.838256224
+            }
+        },
+        "keymae": 1.993133093
+    },
+    "CHARLOTTE AREA, NC": {
+        "data_source_sha1": "8633b0bd43dfc8b740c5e279ccf2bf9f3a67f358",
+        "exogen": {
+            "CATAWBA, SC": {
+                "data_source_sha1": "097afe5b06114c232325086dc3a9c6481a3de4e1",
+                "exmae": 1.823370789
+            },
+            "CATAWBA, SC|FORT MILL 4 NW, SC": {
+                "data_source_sha1": "c00a3a842ff9aa30b1a27c2dcb55c7c05778e54c",
+                "exmae": 1.854941104
+            },
+            "FORT MILL 4 NW, SC": {
+                "data_source_sha1": "42e692135d97e0bbd63499a34bf5b34eaf0ca38e",
+                "exmae": 1.847236371
+            }
+        },
+        "keymae": 1.682739717
+    },
+    "COWEETA EXP STATION, NC": {
+        "data_source_sha1": "a37b626d51416ae1c8b8566adabbebf37bc54574",
+        "exogen": {
+            "CLAYTON 1 SSW, GA": {
+                "data_source_sha1": "96609d3b88117abdcd4c158dc30e16a1ab8fbdca",
+                "exmae": 2.98025174
+            },
+            "CLAYTON 1 SSW, GA|HELEN, GA": {
+                "data_source_sha1": "5525b7d056bababae301cbad9651ca36bafdd5b3",
+                "exmae": 3.197395434
+            },
+            "CLAYTON 1 SSW, GA|HELEN, GA|SAUTEE 3W, GA": {
+                "data_source_sha1": "02391eefca5f84fd2164f30a9e9ca8df9b7d0e2d",
+                "exmae": 3.246921474
+            },
+            "CLAYTON 1 SSW, GA|SAUTEE 3W, GA": {
+                "data_source_sha1": "77d890b7f85c520a1b8360981807adc91f5e6462",
+                "exmae": 3.255216675
+            },
+            "HELEN, GA": {
+                "data_source_sha1": "e9ca7b613cbe839ac224248cc51316610be35dd5",
+                "exmae": 3.221167942
+            },
+            "HELEN, GA|SAUTEE 3W, GA": {
+                "data_source_sha1": "7666c1de06eb205c018aa509aa6397886d7e5fa3",
+                "exmae": 3.354479612
+            },
+            "LONG CREEK, SC": {
+                "data_source_sha1": "e217ed09e83d31f2eecce10239f1214cc5398b3a",
+                "exmae": 2.686993385
+            },
+            "LONG CREEK, SC|CLAYTON 1 SSW, GA": {
+                "data_source_sha1": "441489e391b459d76fcad4d9185307b8cafbd99b",
+                "exmae": 3.156176861
+            },
+            "LONG CREEK, SC|CLAYTON 1 SSW, GA|HELEN, GA": {
+                "data_source_sha1": "a748b1c016cdb65c4fc38aefd0adfdb3c8819fb8",
+                "exmae": 3.185695636
+            },
+            "LONG CREEK, SC|CLAYTON 1 SSW, GA|HELEN, GA|SAUTEE 3W, GA": {
+                "data_source_sha1": "499ab9fc8a093e6663662e3f7fa291a5dd9f17c2",
+                "exmae": 3.251744544
+            },
+            "LONG CREEK, SC|CLAYTON 1 SSW, GA|SAUTEE 3W, GA": {
+                "data_source_sha1": "9804a65cbd6526683bc41d265f18d6c8e978023f",
+                "exmae": 3.261169266
+            },
+            "LONG CREEK, SC|HELEN, GA": {
+                "data_source_sha1": "3229e207b7ce7186765c2a4efdcb63cd156a7c5e",
+                "exmae": 3.239903241
+            },
+            "LONG CREEK, SC|HELEN, GA|SAUTEE 3W, GA": {
+                "data_source_sha1": "185c3ff4b994c97a6173ff935e635180a717f06d",
+                "exmae": 3.336384932
+            },
+            "LONG CREEK, SC|SAUTEE 3W, GA": {
+                "data_source_sha1": "1984fa97abd4480aeaae9102d6a4a2f39b774b12",
+                "exmae": 3.339491579
+            },
+            "LONG CREEK, SC|WALHALLA, SC": {
+                "data_source_sha1": "6499626ddac5e9c2eb59f1dfa755961bd405d8e3",
+                "exmae": 3.118638929
+            },
+            "LONG CREEK, SC|WALHALLA, SC|CLAYTON 1 SSW, GA": {
+                "data_source_sha1": "7ce9611cc194e653a075dd49bc8fc783ca030746",
+                "exmae": 3.131501954
+            },
+            "LONG CREEK, SC|WALHALLA, SC|CLAYTON 1 SSW, GA|HELEN, GA": {
+                "data_source_sha1": "d28fa5cd166ad44296dec2551fd5dfb58b8c6528",
+                "exmae": 3.201743184
+            },
+            "LONG CREEK, SC|WALHALLA, SC|CLAYTON 1 SSW, GA|HELEN, GA|SAUTEE 3W, GA": {
+                "data_source_sha1": "0b51ff213c9f4661a37f162d32040fe5b14c1327",
+                "exmae": 3.230685315
+            },
+            "LONG CREEK, SC|WALHALLA, SC|CLAYTON 1 SSW, GA|SAUTEE 3W, GA": {
+                "data_source_sha1": "dae135682ca9354467ef73fbafee00afa58a7fe6",
+                "exmae": 3.234577106
+            },
+            "LONG CREEK, SC|WALHALLA, SC|HELEN, GA": {
+                "data_source_sha1": "ea228d0c45906352110ba89bce68eec9a7a0a95f",
+                "exmae": 3.252765568
+            },
+            "LONG CREEK, SC|WALHALLA, SC|HELEN, GA|SAUTEE 3W, GA": {
+                "data_source_sha1": "32ad43660c489c6e220226435d1cbef60fa327a2",
+                "exmae": 3.336926514
+            },
+            "LONG CREEK, SC|WALHALLA, SC|SAUTEE 3W, GA": {
+                "data_source_sha1": "82992303ecb2735d8093d5c683d5224d0539b220",
+                "exmae": 3.317770831
+            },
+            "SAUTEE 3W, GA": {
+                "data_source_sha1": "b870286d9149a1691d13810183ef9411d5e5c906",
+                "exmae": 3.361945625
+            },
+            "WALHALLA, SC": {
+                "data_source_sha1": "1fc753491ff6608b66f0a7c98f6b1de786272f48",
+                "exmae": 3.116920089
+            },
+            "WALHALLA, SC|CLAYTON 1 SSW, GA": {
+                "data_source_sha1": "48820113e0fc929c2e8c83da13cd7cb4a4809577",
+                "exmae": 3.116453361
+            },
+            "WALHALLA, SC|CLAYTON 1 SSW, GA|HELEN, GA": {
+                "data_source_sha1": "71679bd8cd004c020f711b422a6c83a8c595d23b",
+                "exmae": 3.211118273
+            },
+            "WALHALLA, SC|CLAYTON 1 SSW, GA|HELEN, GA|SAUTEE 3W, GA": {
+                "data_source_sha1": "4a298b1a6abf592fa8c5eb381c75e9fd84717ab1",
+                "exmae": 3.221451173
+            },
+            "WALHALLA, SC|CLAYTON 1 SSW, GA|SAUTEE 3W, GA": {
+                "data_source_sha1": "f3584da468b2cf9148f422d8578f7fbdeabc1a95",
+                "exmae": 3.226390066
+            },
+            "WALHALLA, SC|HELEN, GA": {
+                "data_source_sha1": "b3e81f3835ab5a6e73b19882d15789bbc916ff73",
+                "exmae": 3.283915732
+            },
+            "WALHALLA, SC|HELEN, GA|SAUTEE 3W, GA": {
+                "data_source_sha1": "72007e52c073aa62b85846de9b07e767f827d97a",
+                "exmae": 3.441854295
+            },
+            "WALHALLA, SC|SAUTEE 3W, GA": {
+                "data_source_sha1": "b4e7864b21b40104913f2bc45e4624a2e1f8483a",
+                "exmae": 3.321479994
+            }
+        },
+        "keymae": 2.504490236
+    },
+    "CULLOWHEE, NC": {
+        "data_source_sha1": "6d84e4d8891b3bd8421b2a0f079f5d7494c68554",
+        "exogen": {
+            "MT LECONTE, TN": {
+                "data_source_sha1": "c66a13b50a9c2b15f5f2fc6a1c2db3c0a8eb04a7",
+                "exmae": 2.260127668
+            },
+            "MT LECONTE, TN|NEWFOUND GAP, TN": {
+                "data_source_sha1": "6739e12ffcc2985603bc9012f7596c1a0f65c36d",
+                "exmae": 2.359511606
+            },
+            "NEWFOUND GAP, TN": {
+                "data_source_sha1": "d9ec96942819121b6314196a0b572343055aa2c6",
+                "exmae": 2.289578959
+            }
+        },
+        "keymae": 1.797076426
+    },
+    "DANBURY, NC": {
+        "data_source_sha1": "fd928e7f61584d5e414fc659d245be41eb66c40a",
+        "exogen": {
+            "MARTINSVILLE FILTER PLANT, VA": {
+                "data_source_sha1": "34d95022a76d7e2f8313480da3e3c7976a5912c4",
+                "exmae": 1.852628307
+            },
+            "MARTINSVILLE FILTER PLANT, VA|MEADOWS OF DAN 5 SW, VA": {
+                "data_source_sha1": "13bfc62618f1f65eef4d618acb67fe4caae0b054",
+                "exmae": 2.082558685
+            },
+            "MARTINSVILLE FILTER PLANT, VA|MEADOWS OF DAN 5 SW, VA|STUART, VA": {
+                "data_source_sha1": "cc6c88db28a96890c3c5cff1dd41ef55f2d0ad24",
+                "exmae": 2.021224928
+            },
+            "MARTINSVILLE FILTER PLANT, VA|STUART, VA": {
+                "data_source_sha1": "70616da0e3af08c85f8efaa1099a6b09414f2912",
+                "exmae": 2.043754322
+            },
+            "MEADOWS OF DAN 5 SW, VA": {
+                "data_source_sha1": "cd7434002fcbd88628bca26b30f2d3bced50b2ee",
+                "exmae": 1.913366954
+            },
+            "MEADOWS OF DAN 5 SW, VA|STUART, VA": {
+                "data_source_sha1": "630ea247a2c88431e3f053f63c12f1752a7d0ff7",
+                "exmae": 1.974214446
+            },
+            "STUART, VA": {
+                "data_source_sha1": "b6c96f2e6bbd573866446a697483cd6950ee03ae",
+                "exmae": 1.926624638
+            }
+        },
+        "keymae": 1.576582785
+    },
+    "EDEN, NC": {
+        "data_source_sha1": "739f395ac20ca869c286410cc08e49f457fa266c",
+        "exogen": {
+            "CHATHAM, VA": {
+                "data_source_sha1": "db48bbfb387660ce5739decff5cc2a68f953509f",
+                "exmae": 1.846085017
+            },
+            "CHATHAM, VA|MARTINSVILLE FILTER PLANT, VA": {
+                "data_source_sha1": "e929130788bdf1b628f674691d754bdd1987748b",
+                "exmae": 1.982806883
+            },
+            "CHATHAM, VA|MARTINSVILLE FILTER PLANT, VA|STUART, VA": {
+                "data_source_sha1": "07da5939cd56a0667c5f3bb6a6f49598f0e36f55",
+                "exmae": 1.970303474
+            },
+            "CHATHAM, VA|STUART, VA": {
+                "data_source_sha1": "1f31abd88c71072bdc00570089dd31ef0c674399",
+                "exmae": 1.982617108
+            },
+            "MARTINSVILLE FILTER PLANT, VA": {
+                "data_source_sha1": "34d95022a76d7e2f8313480da3e3c7976a5912c4",
+                "exmae": 2.100087195
+            },
+            "MARTINSVILLE FILTER PLANT, VA|STUART, VA": {
+                "data_source_sha1": "70616da0e3af08c85f8efaa1099a6b09414f2912",
+                "exmae": 2.070721483
+            },
+            "STUART, VA": {
+                "data_source_sha1": "b6c96f2e6bbd573866446a697483cd6950ee03ae",
+                "exmae": 1.866012235
+            }
+        },
+        "keymae": 1.521060863
+    },
+    "ENFIELD, NC": {
+        "data_source_sha1": "e61ff22181d8d6300ac5433de84bbbafd285be67",
+        "exogen": {
+            "EMPORIA, VA": {
+                "data_source_sha1": "1e6b2c123224017f854a62cef7c630ecf693e009",
+                "exmae": 1.278896678
+            },
+            "JOHN KERR DAM, VA": {
+                "data_source_sha1": "008e6177b9cd930f87402dd5ef2d831cd0f70119",
+                "exmae": 1.228089409
+            },
+            "JOHN KERR DAM, VA|EMPORIA, VA": {
+                "data_source_sha1": "cded9288914b8e1b269d1588329d42481689cc6e",
+                "exmae": 1.318847989
+            }
+        },
+        "keymae": 0.912938952
+    },
+    "FOREST CITY 8 W, NC": {
+        "data_source_sha1": "3bdb36c3ab8f4b01fafb4ddc39ae428c34710445",
+        "exogen": {
+            "CHESNEE 7 WSW, SC": {
+                "data_source_sha1": "65fba7fe07dd23fc611699c5eae01a2c5c96bdb8",
+                "exmae": 1.934996905
+            },
+            "CHESNEE 7 WSW, SC|GAFFNEY 6 E, SC": {
+                "data_source_sha1": "45ed473b68f998a1b7f7b0c4b950b5caaa2c4324",
+                "exmae": 1.88068435
+            },
+            "CHESNEE 7 WSW, SC|GAFFNEY 6 E, SC|SPARTANBURG 3 SSE, SC": {
+                "data_source_sha1": "df71497dff5c1defcb182ddd5fd94b438db0d550",
+                "exmae": 1.928883175
+            },
+            "CHESNEE 7 WSW, SC|SPARTANBURG 3 SSE, SC": {
+                "data_source_sha1": "aecb24ac8edb30305d151c6ef22c95faf50b48f8",
+                "exmae": 1.943536229
+            },
+            "GAFFNEY 6 E, SC": {
+                "data_source_sha1": "850f46ecb6bef05fbda213107c7801d959ec278a",
+                "exmae": 1.754121679
+            },
+            "GAFFNEY 6 E, SC|SPARTANBURG 3 SSE, SC": {
+                "data_source_sha1": "4ac7eb63d6ecca10e1328e7415b957525a82eb62",
+                "exmae": 1.8372171
+            },
+            "SPARTANBURG 3 SSE, SC": {
+                "data_source_sha1": "4480f5ae3f3c8c2e7ba25081eaec0b1cfd6d0d36",
+                "exmae": 1.913483019
+            }
+        },
+        "keymae": 1.86483287
+    },
+    "FRANKLIN, NC": {
+        "data_source_sha1": "3de0b6f4400a165f3c6beb97eb4f9bbb1c6d4f5d",
+        "exogen": {
+            "CLAYTON 1 SSW, GA": {
+                "data_source_sha1": "96609d3b88117abdcd4c158dc30e16a1ab8fbdca",
+                "exmae": 1.935064764
+            },
+            "CLAYTON 1 SSW, GA|NEWFOUND GAP, TN": {
+                "data_source_sha1": "1d8f183ccd287614b65c2f5d4f52eb089d62c8db",
+                "exmae": 2.063115384
+            },
+            "LONG CREEK, SC": {
+                "data_source_sha1": "e217ed09e83d31f2eecce10239f1214cc5398b3a",
+                "exmae": 2.042433344
+            },
+            "LONG CREEK, SC|CLAYTON 1 SSW, GA": {
+                "data_source_sha1": "441489e391b459d76fcad4d9185307b8cafbd99b",
+                "exmae": 1.992823093
+            },
+            "LONG CREEK, SC|CLAYTON 1 SSW, GA|NEWFOUND GAP, TN": {
+                "data_source_sha1": "6651b15e954b8d2f00040ab94acd277f8597442a",
+                "exmae": 2.077404374
+            },
+            "LONG CREEK, SC|NEWFOUND GAP, TN": {
+                "data_source_sha1": "883d001eded6aae623932a0af833a55435a1326c",
+                "exmae": 2.120126526
+            },
+            "NEWFOUND GAP, TN": {
+                "data_source_sha1": "d9ec96942819121b6314196a0b572343055aa2c6",
+                "exmae": 2.116372864
+            }
+        },
+        "keymae": 1.912261925
+    },
+    "GASTONIA, NC": {
+        "data_source_sha1": "c943c8d89285164bb54d722884965303a2949d0e",
+        "exogen": {
+            "FORT MILL 4 NW, SC": {
+                "data_source_sha1": "42e692135d97e0bbd63499a34bf5b34eaf0ca38e",
+                "exmae": 1.656174077
+            },
+            "FORT MILL 4 NW, SC|GAFFNEY 6 E, SC": {
+                "data_source_sha1": "e34c3c4469355ddc017e19118aec4df49169629e",
+                "exmae": 1.605085075
+            },
+            "GAFFNEY 6 E, SC": {
+                "data_source_sha1": "850f46ecb6bef05fbda213107c7801d959ec278a",
+                "exmae": 1.609957851
+            }
+        },
+        "keymae": 1.612306154
+    },
+    "GRANDFATHER MTN, NC": {
+        "data_source_sha1": "b527f058528d2df0db12e64c9ce6b8871b393a89",
+        "exogen": {
+            "ELIZABETHTON, TN": {
+                "data_source_sha1": "5873d53d75c1addd503e6bc4797f6304c6bba813",
+                "exmae": 2.68488472
+            },
+            "ELIZABETHTON, TN|ROAN MOUNTAIN 3SW, TN": {
+                "data_source_sha1": "2f49a7b01af91b023e73d938e5aaaa15b78741c1",
+                "exmae": 2.973285892
+            },
+            "ROAN MOUNTAIN 3SW, TN": {
+                "data_source_sha1": "74515a0df40e417d19305924953cc4767b218aaa",
+                "exmae": 2.978424928
+            }
+        },
+        "keymae": 2.583667713
+    },
+    "GREENSBORO AP, NC": {
+        "data_source_sha1": "b681b757427b610cff265a79716e7d81dada4282",
+        "exogen": {
+            "MARTINSVILLE FILTER PLANT, VA": {
+                "data_source_sha1": "34d95022a76d7e2f8313480da3e3c7976a5912c4",
+                "exmae": 1.763337134
+            },
+            "MARTINSVILLE FILTER PLANT, VA|MEADOWS OF DAN 5 SW, VA": {
+                "data_source_sha1": "13bfc62618f1f65eef4d618acb67fe4caae0b054",
+                "exmae": 1.882422888
+            },
+            "MARTINSVILLE FILTER PLANT, VA|MEADOWS OF DAN 5 SW, VA|STUART, VA": {
+                "data_source_sha1": "cc6c88db28a96890c3c5cff1dd41ef55f2d0ad24",
+                "exmae": 1.878667534
+            },
+            "MARTINSVILLE FILTER PLANT, VA|STUART, VA": {
+                "data_source_sha1": "70616da0e3af08c85f8efaa1099a6b09414f2912",
+                "exmae": 1.88786062
+            },
+            "MEADOWS OF DAN 5 SW, VA": {
+                "data_source_sha1": "cd7434002fcbd88628bca26b30f2d3bced50b2ee",
+                "exmae": 1.730117146
+            },
+            "MEADOWS OF DAN 5 SW, VA|STUART, VA": {
+                "data_source_sha1": "630ea247a2c88431e3f053f63c12f1752a7d0ff7",
+                "exmae": 1.781853523
+            },
+            "STUART, VA": {
+                "data_source_sha1": "b6c96f2e6bbd573866446a697483cd6950ee03ae",
+                "exmae": 1.687311744
+            }
+        },
+        "keymae": 1.620551111
+    },
+    "HAYESVILLE 1 NE, NC": {
+        "data_source_sha1": "70015810f6858296d5306451aa47537796832f77",
+        "exogen": {
+            "BLAIRSVILLE EXP STA, GA": {
+                "data_source_sha1": "79b1c3c6c2444be996b2d988184d08dace41e5d2",
+                "exmae": 1.963876095
+            },
+            "BLAIRSVILLE EXP STA, GA|HELEN, GA": {
+                "data_source_sha1": "b512bc5675a8cae6980b105ea090045daf671542",
+                "exmae": 2.112759536
+            },
+            "BLAIRSVILLE EXP STA, GA|HELEN, GA|SAUTEE 3W, GA": {
+                "data_source_sha1": "66fe97e2a49f15c558fb0cb37adb504947592d76",
+                "exmae": 2.21848975
+            },
+            "BLAIRSVILLE EXP STA, GA|SAUTEE 3W, GA": {
+                "data_source_sha1": "d14fbe4badde0b25417321db6bfd04abc37bac2e",
+                "exmae": 2.198323788
+            },
+            "CLAYTON 1 SSW, GA": {
+                "data_source_sha1": "96609d3b88117abdcd4c158dc30e16a1ab8fbdca",
+                "exmae": 1.927083149
+            },
+            "CLAYTON 1 SSW, GA|BLAIRSVILLE EXP STA, GA": {
+                "data_source_sha1": "e36342839d77d225bf85e28ba9a21a56373f10db",
+                "exmae": 1.988739251
+            },
+            "CLAYTON 1 SSW, GA|BLAIRSVILLE EXP STA, GA|HELEN, GA": {
+                "data_source_sha1": "0361470c6ddc1d8dafc8116226a6f0322705d214",
+                "exmae": 2.075093786
+            },
+            "CLAYTON 1 SSW, GA|BLAIRSVILLE EXP STA, GA|HELEN, GA|SAUTEE 3W, GA": {
+                "data_source_sha1": "f28b8e7582ca2b1d6fc3736799443613f17e4c8d",
+                "exmae": 2.171622866
+            },
+            "CLAYTON 1 SSW, GA|BLAIRSVILLE EXP STA, GA|SAUTEE 3W, GA": {
+                "data_source_sha1": "f9cf5498e285075c6b61afe9a77d540b93bead04",
+                "exmae": 2.175204145
+            },
+            "CLAYTON 1 SSW, GA|HELEN, GA": {
+                "data_source_sha1": "5525b7d056bababae301cbad9651ca36bafdd5b3",
+                "exmae": 2.067363943
+            },
+            "CLAYTON 1 SSW, GA|HELEN, GA|SAUTEE 3W, GA": {
+                "data_source_sha1": "02391eefca5f84fd2164f30a9e9ca8df9b7d0e2d",
+                "exmae": 2.249854336
+            },
+            "CLAYTON 1 SSW, GA|SAUTEE 3W, GA": {
+                "data_source_sha1": "77d890b7f85c520a1b8360981807adc91f5e6462",
+                "exmae": 2.231035828
+            },
+            "HELEN, GA": {
+                "data_source_sha1": "e9ca7b613cbe839ac224248cc51316610be35dd5",
+                "exmae": 2.117885806
+            },
+            "HELEN, GA|SAUTEE 3W, GA": {
+                "data_source_sha1": "7666c1de06eb205c018aa509aa6397886d7e5fa3",
+                "exmae": 2.324997606
+            },
+            "SAUTEE 3W, GA": {
+                "data_source_sha1": "b870286d9149a1691d13810183ef9411d5e5c906",
+                "exmae": 2.346381267
+            }
+        },
+        "keymae": 1.671190917
+    },
+    "HENDERSON 2 NNW, NC": {
+        "data_source_sha1": "a65c35a5851406ec7df39e8b07a3cd6c1ea8cf14",
+        "exogen": {
+            "JOHN KERR DAM, VA": {
+                "data_source_sha1": "008e6177b9cd930f87402dd5ef2d831cd0f70119",
+                "exmae": 1.906670756
+            },
+            "SOUTH BOSTON, VA": {
+                "data_source_sha1": "36148f61c85bd0e5321b101a36de35396e576d44",
+                "exmae": 1.905091465
+            },
+            "SOUTH BOSTON, VA|JOHN KERR DAM, VA": {
+                "data_source_sha1": "cacec8cd92aa24454b90fe3c97f5a05e5460156e",
+                "exmae": 1.94367847
+            }
+        },
+        "keymae": 1.600224578
+    },
+    "HENDERSONVILLE 1 NE, NC": {
+        "data_source_sha1": "15976fb8a3cd019c506d0dd2341c89ae77dd9131",
+        "exogen": {
+            "CAESARS HEAD, SC": {
+                "data_source_sha1": "009dd711216f5b350fc7d5cc2c3e263aa6abf5fb",
+                "exmae": 2.740422618
+            },
+            "CAESARS HEAD, SC|CLEVELAND 3S, SC": {
+                "data_source_sha1": "f8aff8a3d06727b5e66032ceecddf67c46051da1",
+                "exmae": 2.802510802
+            },
+            "CLEVELAND 3S, SC": {
+                "data_source_sha1": "ec63d033b5549b3311a2711ad5aa92b4f5105e8d",
+                "exmae": 2.695530223
+            }
+        },
+        "keymae": 2.465586589
+    },
+    "HIGHLANDS, NC": {
+        "data_source_sha1": "2643fe3a54624cb9e0b4213e3ce40fa3cef5e7a1",
+        "exogen": {
+            "CLAYTON 1 SSW, GA": {
+                "data_source_sha1": "96609d3b88117abdcd4c158dc30e16a1ab8fbdca",
+                "exmae": 3.926907731
+            },
+            "LONG CREEK, SC": {
+                "data_source_sha1": "e217ed09e83d31f2eecce10239f1214cc5398b3a",
+                "exmae": 3.781213614
+            },
+            "LONG CREEK, SC|CLAYTON 1 SSW, GA": {
+                "data_source_sha1": "441489e391b459d76fcad4d9185307b8cafbd99b",
+                "exmae": 4.027901983
+            },
+            "LONG CREEK, SC|WALHALLA, SC": {
+                "data_source_sha1": "6499626ddac5e9c2eb59f1dfa755961bd405d8e3",
+                "exmae": 4.050548608
+            },
+            "LONG CREEK, SC|WALHALLA, SC|CLAYTON 1 SSW, GA": {
+                "data_source_sha1": "7ce9611cc194e653a075dd49bc8fc783ca030746",
+                "exmae": 4.050412713
+            },
+            "PICKENS AREA, SC": {
+                "data_source_sha1": "7a53b8c9a72bdac6f4d96b53428c33bb809bb77f",
+                "exmae": 3.683794004
+            },
+            "PICKENS AREA, SC|CLAYTON 1 SSW, GA": {
+                "data_source_sha1": "38507db0d91da3525c5d57956fb03e2c7049b269",
+                "exmae": 3.979472599
+            },
+            "PICKENS AREA, SC|LONG CREEK, SC": {
+                "data_source_sha1": "0db0d038473af99d300b2aa572594b987708509c",
+                "exmae": 3.861436822
+            },
+            "PICKENS AREA, SC|LONG CREEK, SC|CLAYTON 1 SSW, GA": {
+                "data_source_sha1": "f8f328983173593f4e19174198c269510f5cf02b",
+                "exmae": 3.974903468
+            },
+            "PICKENS AREA, SC|LONG CREEK, SC|WALHALLA, SC": {
+                "data_source_sha1": "03d43d53790ed1f3de0812cfde27e492c0c56dc1",
+                "exmae": 3.993085042
+            },
+            "PICKENS AREA, SC|LONG CREEK, SC|WALHALLA, SC|CLAYTON 1 SSW, GA": {
+                "data_source_sha1": "b9d1a455a7f940c0236330201b4bc577b3b3ecca",
+                "exmae": 3.99797081
+            },
+            "PICKENS AREA, SC|WALHALLA, SC": {
+                "data_source_sha1": "947096c0b24fafd5fd1147f07b6be4e2fb2b9107",
+                "exmae": 3.935849481
+            },
+            "PICKENS AREA, SC|WALHALLA, SC|CLAYTON 1 SSW, GA": {
+                "data_source_sha1": "e65354262453a134c79bec3783425e8d56ac8789",
+                "exmae": 4.057952568
+            },
+            "WALHALLA, SC": {
+                "data_source_sha1": "1fc753491ff6608b66f0a7c98f6b1de786272f48",
+                "exmae": 3.948473878
+            },
+            "WALHALLA, SC|CLAYTON 1 SSW, GA": {
+                "data_source_sha1": "48820113e0fc929c2e8c83da13cd7cb4a4809577",
+                "exmae": 4.09037143
+            }
+        },
+        "keymae": 3.343297672
+    },
+    "HOT SPRINGS, NC": {
+        "data_source_sha1": "5d1be61bc809f7f8c5041ab391f4a23c1f319c61",
+        "exogen": {
+            "ERWIN 1 W, TN": {
+                "data_source_sha1": "a42f839d575f4b5f595ad09ddd05739c73a9a8a2",
+                "exmae": 1.952204753
+            },
+            "ERWIN 1 W, TN|GREENEVILLE EXP STA, TN": {
+                "data_source_sha1": "1a1cf6a03fa9864dbcc00451657c8db58a277a2f",
+                "exmae": 1.828813758
+            },
+            "ERWIN 1 W, TN|GREENEVILLE EXP STA, TN|NEWPORT 1 NW, TN": {
+                "data_source_sha1": "332b8b7b59197daa813daec7ba9001c351013805",
+                "exmae": 1.778316412
+            },
+            "ERWIN 1 W, TN|NEWPORT 1 NW, TN": {
+                "data_source_sha1": "5efdeb0c263da3c5336b04df232127447cbafa2f",
+                "exmae": 1.776813561
+            },
+            "GREENEVILLE EXP STA, TN": {
+                "data_source_sha1": "ade192904f5758a2ef5750afe89f81612fdc007f",
+                "exmae": 2.703318333
+            },
+            "GREENEVILLE EXP STA, TN|NEWPORT 1 NW, TN": {
+                "data_source_sha1": "f106ab67dbb6cb4de9765a9a3b399912474c0c42",
+                "exmae": 1.724582055
+            },
+            "NEWPORT 1 NW, TN": {
+                "data_source_sha1": "2c01629fd74c701daba8bf8b61761a7e1861fdc5",
+                "exmae": 1.708569392
+            }
+        },
+        "keymae": 1.564653891
+    },
+    "JACKSON SPRINGS 5 WNW, NC": {
+        "data_source_sha1": "c963e85deaf0309f90cb38c9e1476d7c553f6674",
+        "exogen": {
+            "CHERAW, SC": {
+                "data_source_sha1": "43483c25454285e1438452afdeee26e8d7281276",
+                "exmae": 2.167685749
+            },
+            "CHESTERFIELD 3 E, SC": {
+                "data_source_sha1": "b96a753f02f72055cf6128a249066718b60367bd",
+                "exmae": 2.685657576
+            },
+            "CHESTERFIELD 3 E, SC|CHERAW, SC": {
+                "data_source_sha1": "6157220fa0eadcddcb09fa6e7efc1723c88c27e0",
+                "exmae": 2.276928977
+            },
+            "CHESTERFIELD 3 E, SC|CHERAW, SC|PAGELAND 9.0 WNW, SC": {
+                "data_source_sha1": "d468dd99dcb42c132efc5422c88496da5f30b091",
+                "exmae": 2.113150678
+            },
+            "PAGELAND 9.0 WNW, SC": {
+                "data_source_sha1": "aa3e54288d466a656553c2e21f4e95a8b89a6c78",
+                "exmae": 2.116547397
+            }
+        },
+        "keymae": 1.880135881
+    },
+    "KING, NC": {
+        "data_source_sha1": "dc09eae9783f9dd570126cf93151fe13ef28e146",
+        "exogen": {
+            "STUART, VA": {
+                "data_source_sha1": "b6c96f2e6bbd573866446a697483cd6950ee03ae",
+                "exmae": 1.838573506
+            }
+        },
+        "keymae": 1.579766994
+    },
+    "LAKE LURE 2, NC": {
+        "data_source_sha1": "75edafd2137809975b6660efa45848a34405390a",
+        "exogen": {
+            "CHESNEE 7 WSW, SC": {
+                "data_source_sha1": "65fba7fe07dd23fc611699c5eae01a2c5c96bdb8",
+                "exmae": 2.211269902
+            },
+            "CHESNEE 7 WSW, SC|CLEVELAND 3S, SC": {
+                "data_source_sha1": "9000535cfe364507a2ec537cdbfaab5840b40cd5",
+                "exmae": 2.406073856
+            },
+            "CLEVELAND 3S, SC": {
+                "data_source_sha1": "ec63d033b5549b3311a2711ad5aa92b4f5105e8d",
+                "exmae": 2.476194583
+            }
+        },
+        "keymae": 2.24065399
+    },
+    "LAKE TOXAWAY 2 SW, NC": {
+        "data_source_sha1": "92de2b4a759cd9ccc46f3ce4913ea3e2ad5ab23e",
+        "exogen": {
+            "CAESARS HEAD, SC": {
+                "data_source_sha1": "009dd711216f5b350fc7d5cc2c3e263aa6abf5fb",
+                "exmae": 4.105986175
+            },
+            "CAESARS HEAD, SC|CLEVELAND 3S, SC": {
+                "data_source_sha1": "f8aff8a3d06727b5e66032ceecddf67c46051da1",
+                "exmae": 4.042461783
+            },
+            "CAESARS HEAD, SC|LONG CREEK, SC": {
+                "data_source_sha1": "d15ab289312facb6b8449fb7a8091176137eb065",
+                "exmae": 4.099756026
+            },
+            "CAESARS HEAD, SC|WALHALLA, SC": {
+                "data_source_sha1": "acb9d58d3c556e67985d04c340f8ba3c2cc834bd",
+                "exmae": 4.189144364
+            },
+            "CLEVELAND 3S, SC": {
+                "data_source_sha1": "ec63d033b5549b3311a2711ad5aa92b4f5105e8d",
+                "exmae": 3.893771004
+            },
+            "CLEVELAND 3S, SC|LONG CREEK, SC": {
+                "data_source_sha1": "7a704472d496b027db07dc3d9e2733847db6cb47",
+                "exmae": 4.013111506
+            },
+            "CLEVELAND 3S, SC|WALHALLA, SC": {
+                "data_source_sha1": "7c9b5b0a719738eefd012e36d0e193f5381a0570",
+                "exmae": 4.015857567
+            },
+            "LONG CREEK, SC": {
+                "data_source_sha1": "e217ed09e83d31f2eecce10239f1214cc5398b3a",
+                "exmae": 3.793280735
+            },
+            "PICKENS AREA, SC": {
+                "data_source_sha1": "7a53b8c9a72bdac6f4d96b53428c33bb809bb77f",
+                "exmae": 3.882997434
+            },
+            "PICKENS AREA, SC|CAESARS HEAD, SC": {
+                "data_source_sha1": "35a1bc85a1cdfb1d396858fecf4a808fde5a05d7",
+                "exmae": 4.079965422
+            },
+            "PICKENS AREA, SC|CAESARS HEAD, SC|CLEVELAND 3S, SC|LONG CREEK, SC|WALHALLA, SC": {
+                "data_source_sha1": "b7aa8aa33460b02c65df6c7688522972cb60eb6c",
+                "exmae": 4.193729306
+            },
+            "PICKENS AREA, SC|CLEVELAND 3S, SC": {
+                "data_source_sha1": "6060dad426f0b51858aa7e4fcd23234ec9ec51d6",
+                "exmae": 3.835231148
+            },
+            "PICKENS AREA, SC|LONG CREEK, SC": {
+                "data_source_sha1": "0db0d038473af99d300b2aa572594b987708509c",
+                "exmae": 4.094816143
+            },
+            "PICKENS AREA, SC|WALHALLA, SC": {
+                "data_source_sha1": "947096c0b24fafd5fd1147f07b6be4e2fb2b9107",
+                "exmae": 4.029279633
+            },
+            "WALHALLA, SC": {
+                "data_source_sha1": "1fc753491ff6608b66f0a7c98f6b1de786272f48",
+                "exmae": 4.005650022
+            }
+        },
+        "keymae": 3.676079834
+    },
+    "LAURINBURG, NC": {
+        "data_source_sha1": "9705364766c76a0a1952a51572ff8d674e5fe555",
+        "exogen": {
+            "CHERAW, SC": {
+                "data_source_sha1": "43483c25454285e1438452afdeee26e8d7281276",
+                "exmae": 2.265768352
+            },
+            "CHESTERFIELD 3 E, SC": {
+                "data_source_sha1": "b96a753f02f72055cf6128a249066718b60367bd",
+                "exmae": 2.256082996
+            },
+            "CHESTERFIELD 3 E, SC|CHERAW, SC": {
+                "data_source_sha1": "6157220fa0eadcddcb09fa6e7efc1723c88c27e0",
+                "exmae": 2.314462183
+            },
+            "DARLINGTON, SC": {
+                "data_source_sha1": "b5b4536c0827504888839bd8e461f647ddf6fd5d",
+                "exmae": 2.048045487
+            },
+            "DARLINGTON, SC|CHERAW, SC": {
+                "data_source_sha1": "ccd144c8db99f999494a1c0f154a045576a51054",
+                "exmae": 2.284921097
+            },
+            "DARLINGTON, SC|CHESTERFIELD 3 E, SC": {
+                "data_source_sha1": "837769e0a46eaa3ece9dac7cfc04fbbe30e1b68c",
+                "exmae": 2.152112423
+            },
+            "DARLINGTON, SC|CHESTERFIELD 3 E, SC|CHERAW, SC": {
+                "data_source_sha1": "db1b06cf1f85027f4eb8d72502208238b9d1bd2d",
+                "exmae": 2.289527411
+            },
+            "DARLINGTON, SC|DILLON, SC": {
+                "data_source_sha1": "3ce34f6f94ee7496eaf5765895ed544e977c59d8",
+                "exmae": 2.004263627
+            },
+            "DARLINGTON, SC|DILLON, SC|CHERAW, SC": {
+                "data_source_sha1": "821fa50139013b4c6e3cf1a9e834b15bec983bd6",
+                "exmae": 2.125355437
+            },
+            "DARLINGTON, SC|DILLON, SC|CHESTERFIELD 3 E, SC": {
+                "data_source_sha1": "e83ece5dee75acd5e8f7f5cc3bd4db72d2315d3b",
+                "exmae": 2.15308766
+            },
+            "DARLINGTON, SC|DILLON, SC|FLORENCE 8 NE, SC": {
+                "data_source_sha1": "d1b3b0fcf0bcbd0096e3d7271c02d5f9e5d87302",
+                "exmae": 2.023151097
+            },
+            "DARLINGTON, SC|DILLON, SC|FLORENCE 8 NE, SC|CHERAW, SC": {
+                "data_source_sha1": "d0c1219076820281223a8ed59aebde5dae9faf16",
+                "exmae": 2.131729792
+            },
+            "DARLINGTON, SC|DILLON, SC|FLORENCE 8 NE, SC|CHESTERFIELD 3 E, SC": {
+                "data_source_sha1": "2172bb6406f19a597a59df210f85dd11210df1db",
+                "exmae": 2.138086392
+            },
+            "DARLINGTON, SC|DILLON, SC|FLORENCE REGIONAL AIRPORT, SC": {
+                "data_source_sha1": "52d503753eaed738cc259a89254faf90488c0e07",
+                "exmae": 2.12255564
+            },
+            "DARLINGTON, SC|DILLON, SC|FLORENCE REGIONAL AIRPORT, SC|CHERAW, SC": {
+                "data_source_sha1": "51e5e50ae81399318c1de7eb634c8afcda534f3f",
+                "exmae": 2.152721065
+            },
+            "DARLINGTON, SC|DILLON, SC|FLORENCE REGIONAL AIRPORT, SC|CHESTERFIELD 3 E, SC": {
+                "data_source_sha1": "39395c9a2ee68e42442c6fb8e4655b7ad44ca900",
+                "exmae": 2.077845288
+            },
+            "DARLINGTON, SC|DILLON, SC|FLORENCE REGIONAL AIRPORT, SC|FLORENCE 8 NE, SC": {
+                "data_source_sha1": "26e192d6e16e50947af1a2d2946d5f2956df81c3",
+                "exmae": 2.134537175
+            },
+            "DARLINGTON, SC|DILLON, SC|FLORENCE REGIONAL AIRPORT, SC|FLORENCE 8 NE, SC|CHESTERFIELD 3 E, SC|CHERAW, SC": {
+                "data_source_sha1": "6368e975b03d656215b049e34d8a75fb15e94bac",
+                "exmae": 2.175538476
+            },
+            "DARLINGTON, SC|FLORENCE 8 NE, SC": {
+                "data_source_sha1": "5d1b78af73b010d24fd66cd0b1b14b57663b0a0c",
+                "exmae": 2.1520821
+            },
+            "DARLINGTON, SC|FLORENCE 8 NE, SC|CHERAW, SC": {
+                "data_source_sha1": "58dc77d0c8577ffe093107583433da3123380548",
+                "exmae": 2.311280517
+            },
+            "DARLINGTON, SC|FLORENCE 8 NE, SC|CHESTERFIELD 3 E, SC": {
+                "data_source_sha1": "28f14f31fcdfbd4774200ae31d262f6b256711a9",
+                "exmae": 2.207678369
+            },
+            "DARLINGTON, SC|FLORENCE REGIONAL AIRPORT, SC": {
+                "data_source_sha1": "c75ce18579141a9e5157a3b5fab43b4cc711d34f",
+                "exmae": 2.227682787
+            },
+            "DARLINGTON, SC|FLORENCE REGIONAL AIRPORT, SC|CHERAW, SC": {
+                "data_source_sha1": "a5787472b7bff65ffbfa39a85e19bef6cdf53543",
+                "exmae": 2.346924263
+            },
+            "DARLINGTON, SC|FLORENCE REGIONAL AIRPORT, SC|CHESTERFIELD 3 E, SC": {
+                "data_source_sha1": "f987c6019443daaa71cc720442a221707e47d502",
+                "exmae": 2.22965949
+            },
+            "DARLINGTON, SC|FLORENCE REGIONAL AIRPORT, SC|FLORENCE 8 NE, SC": {
+                "data_source_sha1": "aef24b8f41fbb4fd25f8e0b1e1b5149ebed50cbf",
+                "exmae": 2.241024578
+            },
+            "DILLON, SC": {
+                "data_source_sha1": "4d6932eaa22aaac404a5e89453bc9be12355199e",
+                "exmae": 1.856254263
+            },
+            "DILLON, SC|CHERAW, SC": {
+                "data_source_sha1": "1dacd4b18877b7e5d2de9cfe92a912589d88f753",
+                "exmae": 2.137547333
+            },
+            "DILLON, SC|CHESTERFIELD 3 E, SC": {
+                "data_source_sha1": "1a6f8649f4acac6f99131158fd9675b50b9925dd",
+                "exmae": 2.038079759
+            },
+            "DILLON, SC|CHESTERFIELD 3 E, SC|CHERAW, SC": {
+                "data_source_sha1": "2089e9616973704403d5278baf0b3e5c58f7e11e",
+                "exmae": 2.149016445
+            },
+            "DILLON, SC|FLORENCE 8 NE, SC": {
+                "data_source_sha1": "32e05d9e308f99b2062b0c902d8f9401f9e214a1",
+                "exmae": 1.933637944
+            },
+            "DILLON, SC|FLORENCE 8 NE, SC|CHERAW, SC": {
+                "data_source_sha1": "c2ad47d638e5cd09bc94989633f210dea720d663",
+                "exmae": 2.144009921
+            },
+            "DILLON, SC|FLORENCE 8 NE, SC|CHESTERFIELD 3 E, SC": {
+                "data_source_sha1": "c6a7749117d7114e903adb684f264ffc5820f797",
+                "exmae": 2.070056061
+            },
+            "DILLON, SC|FLORENCE REGIONAL AIRPORT, SC": {
+                "data_source_sha1": "e96de45849a41bcb3e222fb426ad15e0a253cb0f",
+                "exmae": 2.134016894
+            },
+            "DILLON, SC|FLORENCE REGIONAL AIRPORT, SC|CHERAW, SC": {
+                "data_source_sha1": "98d9dd91a538b15e448efd60764fda0d1dc35699",
+                "exmae": 2.208404932
+            },
+            "DILLON, SC|FLORENCE REGIONAL AIRPORT, SC|CHESTERFIELD 3 E, SC": {
+                "data_source_sha1": "f93ca590a239eaa9214430807916d40622a748cc",
+                "exmae": 2.109478413
+            },
+            "DILLON, SC|FLORENCE REGIONAL AIRPORT, SC|FLORENCE 8 NE, SC": {
+                "data_source_sha1": "3013763792f56f7af8d340ce34de32ae25828625",
+                "exmae": 2.122560792
+            },
+            "FLORENCE 8 NE, SC": {
+                "data_source_sha1": "78e00356fb48183df2623de7ce8977c305f25e60",
+                "exmae": 2.079152808
+            },
+            "FLORENCE 8 NE, SC|CHERAW, SC": {
+                "data_source_sha1": "58406fa4be4355eadb56f4b301fc7ff664f4aaeb",
+                "exmae": 2.306352958
+            },
+            "FLORENCE 8 NE, SC|CHESTERFIELD 3 E, SC": {
+                "data_source_sha1": "5c4edf33f95c888c637a9f96d38a85dfa07fe910",
+                "exmae": 2.122488877
+            },
+            "FLORENCE 8 NE, SC|CHESTERFIELD 3 E, SC|CHERAW, SC": {
+                "data_source_sha1": "08aa6b7d570de698b8a9c3ed3e652fe1e2f7fe1a",
+                "exmae": 2.304465265
+            },
+            "FLORENCE REGIONAL AIRPORT, SC": {
+                "data_source_sha1": "6c7a47a8bf9b68bc01f6c9b21c1bd00b4c7f6e7e",
+                "exmae": 2.268586897
+            },
+            "FLORENCE REGIONAL AIRPORT, SC|CHERAW, SC": {
+                "data_source_sha1": "8a54f7b6e93528e4cde09a05331d51cf935f1ee2",
+                "exmae": 2.437361321
+            },
+            "FLORENCE REGIONAL AIRPORT, SC|CHESTERFIELD 3 E, SC": {
+                "data_source_sha1": "a8255d7759cc6e152aa3cf298251270ed591e984",
+                "exmae": 2.296574863
+            },
+            "FLORENCE REGIONAL AIRPORT, SC|CHESTERFIELD 3 E, SC|CHERAW, SC": {
+                "data_source_sha1": "5e5c1fa95e8d985dcb6604ad40b0e9cfb1c49af9",
+                "exmae": 2.362032402
+            },
+            "FLORENCE REGIONAL AIRPORT, SC|FLORENCE 8 NE, SC": {
+                "data_source_sha1": "aa39c1608ee2110b1ca2015a4da9be1034249d41",
+                "exmae": 2.188738703
+            },
+            "FLORENCE REGIONAL AIRPORT, SC|FLORENCE 8 NE, SC|CHERAW, SC": {
+                "data_source_sha1": "b3db5272e9613a4a0da9a21e67336053b58ecc3c",
+                "exmae": 2.354113748
+            },
+            "FLORENCE REGIONAL AIRPORT, SC|FLORENCE 8 NE, SC|CHESTERFIELD 3 E, SC": {
+                "data_source_sha1": "fdefbbee8c715fc90c2ea3071853b3a9fbe9f83f",
+                "exmae": 2.236893953
+            }
+        },
+        "keymae": 1.648422257
+    },
+    "LONGWOOD, NC": {
+        "data_source_sha1": "267e8e74e3fd31a4096b04007f5371f7a757e0a5",
+        "exogen": {
+            "LORIS 2 S, SC": {
+                "data_source_sha1": "c2009965d85027e8f22e97eff74873d5cf88b017",
+                "exmae": 2.32508705
+            },
+            "LORIS 2 S, SC|MYRTLE BEACH AREA, SC": {
+                "data_source_sha1": "35602016e08030f8306cdf174da23f800eb48dc5",
+                "exmae": 2.61173337
+            },
+            "MYRTLE BEACH AREA, SC": {
+                "data_source_sha1": "a8c39fdab578cda9074b5be7d534563ae2c57c34",
+                "exmae": 2.742692973
+            }
+        },
+        "keymae": 2.235956826
+    },
+    "LUMBERTON AREA, NC": {
+        "data_source_sha1": "e3e59108bcaff3c96a6f2e992187e58ee0e8265f",
+        "exogen": {
+            "DILLON, SC": {
+                "data_source_sha1": "4d6932eaa22aaac404a5e89453bc9be12355199e",
+                "exmae": 1.886123262
+            }
+        },
+        "keymae": 1.699819322
+    },
+    "MARSHALL, NC": {
+        "data_source_sha1": "f048b4dcb380dc43ddd544561fbf2d1ef6f628a3",
+        "exogen": {
+            "ERWIN 1 W, TN": {
+                "data_source_sha1": "a42f839d575f4b5f595ad09ddd05739c73a9a8a2",
+                "exmae": 1.639991509
+            },
+            "ERWIN 1 W, TN|GREENEVILLE EXP STA, TN|NEWPORT 1 NW, TN": {
+                "data_source_sha1": "332b8b7b59197daa813daec7ba9001c351013805",
+                "exmae": 1.64358911
+            },
+            "GREENEVILLE EXP STA, TN": {
+                "data_source_sha1": "ade192904f5758a2ef5750afe89f81612fdc007f",
+                "exmae": 1.444771843
+            }
+        },
+        "keymae": 1.429116744
+    },
+    "MONROE 2 SE, NC": {
+        "data_source_sha1": "981e22dc3b35bff0fd4a00b7ba33347ac3ad67cd",
+        "exogen": {
+            "CATAWBA, SC": {
+                "data_source_sha1": "097afe5b06114c232325086dc3a9c6481a3de4e1",
+                "exmae": 1.931095694
+            },
+            "CATAWBA, SC|FORT MILL 4 NW, SC": {
+                "data_source_sha1": "c00a3a842ff9aa30b1a27c2dcb55c7c05778e54c",
+                "exmae": 1.936799006
+            },
+            "FORT MILL 4 NW, SC": {
+                "data_source_sha1": "42e692135d97e0bbd63499a34bf5b34eaf0ca38e",
+                "exmae": 1.886741806
+            },
+            "PAGELAND 9.0 WNW, SC": {
+                "data_source_sha1": "aa3e54288d466a656553c2e21f4e95a8b89a6c78",
+                "exmae": 1.973851174
+            },
+            "PAGELAND 9.0 WNW, SC|CATAWBA, SC": {
+                "data_source_sha1": "f1cf6aeb6aadc5d3e4d0a29e8872e34789cc2982",
+                "exmae": 1.980642499
+            },
+            "PAGELAND 9.0 WNW, SC|CATAWBA, SC|FORT MILL 4 NW, SC": {
+                "data_source_sha1": "f2a7a3487d7fe40975dd311d450759731db77f94",
+                "exmae": 1.98244213
+            },
+            "PAGELAND 9.0 WNW, SC|FORT MILL 4 NW, SC": {
+                "data_source_sha1": "3831c9eb927869fdc988f585e1e8feb45edc6efe",
+                "exmae": 1.975315389
+            }
+        },
+        "keymae": 1.798027885
+    },
+    "MOUNT AIRY 2 W, NC": {
+        "data_source_sha1": "6371c7232e3a7a9d4b04a5f039960a53fc2a2886",
+        "exogen": {
+            "MEADOWS OF DAN 5 SW, VA": {
+                "data_source_sha1": "cd7434002fcbd88628bca26b30f2d3bced50b2ee",
+                "exmae": 2.444849741
+            },
+            "MEADOWS OF DAN 5 SW, VA|STUART, VA": {
+                "data_source_sha1": "630ea247a2c88431e3f053f63c12f1752a7d0ff7",
+                "exmae": 2.578087306
+            },
+            "STUART, VA": {
+                "data_source_sha1": "b6c96f2e6bbd573866446a697483cd6950ee03ae",
+                "exmae": 2.299425884
+            }
+        },
+        "keymae": 2.099951003
+    },
+    "MOUNT HOLLY 4 NE, NC": {
+        "data_source_sha1": "6c17da95287cedaa3a80a7292223fbe5d06c5e17",
+        "exogen": {
+            "CATAWBA, SC": {
+                "data_source_sha1": "097afe5b06114c232325086dc3a9c6481a3de4e1",
+                "exmae": 1.688166607
+            },
+            "CATAWBA, SC|CHESNEE 7 WSW, SC": {
+                "data_source_sha1": "4c623dfd35ed4ea2dbc100c86cd17e5a76eefde0",
+                "exmae": 1.649792675
+            },
+            "CATAWBA, SC|CHESNEE 7 WSW, SC|CHESTER 1 SE, SC": {
+                "data_source_sha1": "d24c88ce6166f6a7ad6bbb120c57a38d9a46335d",
+                "exmae": 1.621531799
+            },
+            "CATAWBA, SC|CHESNEE 7 WSW, SC|CHESTER 1 SE, SC|FORT MILL 4 NW, SC|GAFFNEY 6 E, SC|LOCKHART, SC": {
+                "data_source_sha1": "aeb021b9efc4b1f1fd2faeb9122f1a7d0a33a783",
+                "exmae": 1.643464414
+            },
+            "CATAWBA, SC|CHESNEE 7 WSW, SC|FORT MILL 4 NW, SC": {
+                "data_source_sha1": "03f4bd46c774d69eb2d0e9717cacde74d1632a6f",
+                "exmae": 1.698929608
+            },
+            "CATAWBA, SC|CHESNEE 7 WSW, SC|GAFFNEY 6 E, SC": {
+                "data_source_sha1": "70325cc65cc5ccfe1a31ad244789341b07ad7009",
+                "exmae": 1.570665847
+            },
+            "CATAWBA, SC|CHESNEE 7 WSW, SC|LOCKHART, SC": {
+                "data_source_sha1": "c574d390d169941e0ef471e391ad1f3b1f8c9fe3",
+                "exmae": 1.62786133
+            },
+            "CATAWBA, SC|CHESTER 1 SE, SC": {
+                "data_source_sha1": "ce095c3e5c51710cd3f7ce9aad2716403636b2b4",
+                "exmae": 1.659303208
+            },
+            "CATAWBA, SC|CHESTER 1 SE, SC|FORT MILL 4 NW, SC": {
+                "data_source_sha1": "87072b1a0ac17dfa816e90c3b67bc9b5d88cfeec",
+                "exmae": 1.704574413
+            },
+            "CATAWBA, SC|CHESTER 1 SE, SC|GAFFNEY 6 E, SC": {
+                "data_source_sha1": "6b3a7813be21e7477c9ae3edd050b7541c3e9385",
+                "exmae": 1.582830099
+            },
+            "CATAWBA, SC|CHESTER 1 SE, SC|LOCKHART, SC": {
+                "data_source_sha1": "aae7c545144d28c97831907031558bcf5244ef54",
+                "exmae": 1.631719407
+            },
+            "CATAWBA, SC|FORT MILL 4 NW, SC": {
+                "data_source_sha1": "c00a3a842ff9aa30b1a27c2dcb55c7c05778e54c",
+                "exmae": 1.719927481
+            },
+            "CATAWBA, SC|GAFFNEY 6 E, SC": {
+                "data_source_sha1": "14d56caa7703ca9bbde8643c3268a0e66b3b602b",
+                "exmae": 1.596798676
+            },
+            "CATAWBA, SC|LOCKHART, SC": {
+                "data_source_sha1": "26e91e0a71b82d53bd94cd01f19d4444aaa44bce",
+                "exmae": 1.646175145
+            },
+            "CHESNEE 7 WSW, SC": {
+                "data_source_sha1": "65fba7fe07dd23fc611699c5eae01a2c5c96bdb8",
+                "exmae": 1.573411446
+            },
+            "CHESNEE 7 WSW, SC|CHESTER 1 SE, SC": {
+                "data_source_sha1": "131a9313e5a7fdb339d5621d3ac678906fca5594",
+                "exmae": 1.593306359
+            },
+            "CHESNEE 7 WSW, SC|FORT MILL 4 NW, SC": {
+                "data_source_sha1": "0793aa6f46d304195353ce851e3ae9fa965a063a",
+                "exmae": 1.686806847
+            },
+            "CHESNEE 7 WSW, SC|GAFFNEY 6 E, SC": {
+                "data_source_sha1": "45ed473b68f998a1b7f7b0c4b950b5caaa2c4324",
+                "exmae": 1.529708629
+            },
+            "CHESNEE 7 WSW, SC|LOCKHART, SC": {
+                "data_source_sha1": "3b69254b2ae345b5cc13a6418539003ade71f6ff",
+                "exmae": 1.597832049
+            },
+            "CHESTER 1 SE, SC": {
+                "data_source_sha1": "9ac95c5c7f2789adacc25a6969f4babd02145d16",
+                "exmae": 1.611382547
+            },
+            "CHESTER 1 SE, SC|FORT MILL 4 NW, SC": {
+                "data_source_sha1": "446a2f5d14dd7f1e26115c7746558a346dcc8da1",
+                "exmae": 1.693836475
+            },
+            "CHESTER 1 SE, SC|GAFFNEY 6 E, SC": {
+                "data_source_sha1": "f9567468a1dd97fd93d91fec030c345c17f1dd6b",
+                "exmae": 1.581789311
+            },
+            "CHESTER 1 SE, SC|LOCKHART, SC": {
+                "data_source_sha1": "3ff0db4dba18a2f69b99d672bb952ff605ad6e82",
+                "exmae": 1.604384594
+            },
+            "FORT MILL 4 NW, SC": {
+                "data_source_sha1": "42e692135d97e0bbd63499a34bf5b34eaf0ca38e",
+                "exmae": 1.718946467
+            },
+            "FORT MILL 4 NW, SC|GAFFNEY 6 E, SC": {
+                "data_source_sha1": "e34c3c4469355ddc017e19118aec4df49169629e",
+                "exmae": 1.622311889
+            },
+            "FORT MILL 4 NW, SC|LOCKHART, SC": {
+                "data_source_sha1": "af4f8500352d01a263c174068992a32508212a70",
+                "exmae": 1.677612404
+            },
+            "GAFFNEY 6 E, SC": {
+                "data_source_sha1": "850f46ecb6bef05fbda213107c7801d959ec278a",
+                "exmae": 1.633125341
+            },
+            "GAFFNEY 6 E, SC|LOCKHART, SC": {
+                "data_source_sha1": "4199cae9d539d6c0de3738b30622977555eb5031",
+                "exmae": 1.586439194
+            },
+            "LOCKHART, SC": {
+                "data_source_sha1": "b92ce974226679d3e3349157889c29ab170a2877",
+                "exmae": 1.613381999
+            }
+        },
+        "keymae": 1.634784932
+    },
+    "MOUNT MITCHELL AREA, NC": {
+        "data_source_sha1": "8ee52dd7f34807429dd4ad3b7687fb592ee5c457",
+        "exogen": {
+            "ERWIN 1 W, TN": {
+                "data_source_sha1": "a42f839d575f4b5f595ad09ddd05739c73a9a8a2",
+                "exmae": 3.554537631
+            }
+        },
+        "keymae": 3.309804882
+    },
+    "MURFREESBORO, NC": {
+        "data_source_sha1": "de8d1864bcc65858f9f04f474729ea596e148d0e",
+        "exogen": {
+            "EMPORIA, VA": {
+                "data_source_sha1": "1e6b2c123224017f854a62cef7c630ecf693e009",
+                "exmae": 2.008447975
+            }
+        },
+        "keymae": 1.71910997
+    },
+    "MURPHY 4ESE, NC": {
+        "data_source_sha1": "0e56ec36ce9c7f6dadca29f52b8fa76f04d4bf49",
+        "exogen": {
+            "BLAIRSVILLE EXP STA, GA": {
+                "data_source_sha1": "79b1c3c6c2444be996b2d988184d08dace41e5d2",
+                "exmae": 1.881828715
+            }
+        },
+        "keymae": 1.687767737
+    },
+    "OCONALUFTEE, NC": {
+        "data_source_sha1": "128bb1c744a8c2d6c9aacd5edbb6581e98a7fb53",
+        "keymae": 1.855681254
+    },
+    "PISGAH FOREST 3 NE, NC": {
+        "data_source_sha1": "9cc40585ac5ef1c818bbbe0bb9f82f9952207082",
+        "keymae": 2.778801284
+    },
+    "REIDSVILLE 2 NW, NC": {
+        "data_source_sha1": "0dc5cf809e2bc9ee3c1bf5496b3791e67f21116f",
+        "exogen": {
+            "MARTINSVILLE FILTER PLANT, VA": {
+                "data_source_sha1": "34d95022a76d7e2f8313480da3e3c7976a5912c4",
+                "exmae": 1.986579928
+            }
+        },
+        "keymae": 1.514675268
+    },
+    "ROANOKE RAPIDS, NC": {
+        "data_source_sha1": "859ad5ce8fa9139fb9994e4e2433f9e7d81d9b57",
+        "exogen": {
+            "EMPORIA, VA": {
+                "data_source_sha1": "1e6b2c123224017f854a62cef7c630ecf693e009",
+                "exmae": 2.403677968
+            }
+        },
+        "keymae": 1.973340509
+    },
+    "ROBBINSVILLE AG 5 NE, NC": {
+        "data_source_sha1": "53180b44fd687ec94c3ebf00b2e148a00c705a0c",
+        "keymae": 2.029450042
+    },
+    "ROSMAN, NC": {
+        "data_source_sha1": "bed8fbfd62a03f31c82d757982a61b477deae4ef",
+        "keymae": 2.626506572
+    },
+    "SHELBY 2 NW, NC": {
+        "data_source_sha1": "f520bf465b00fdba8cc674a0fff1cfce987888ab",
+        "keymae": 1.867760249
+    },
+    "TAPOCO, NC": {
+        "data_source_sha1": "56bd8e49cd0f25b291e867c7ab00e13d214c1956",
+        "exogen": {
+            "GATLINBURG 2 SW, TN": {
+                "data_source_sha1": "4bf658300dc14be31ce10e0ef59b7d44c3041946",
+                "exmae": 1.497216334
+            },
+            "GATLINBURG 2 SW, TN|NEWFOUND GAP, TN": {
+                "data_source_sha1": "aaaad8ccb93c3cf823c372c4ef6b5b200c6bc3be",
+                "exmae": 1.548939808
+            },
+            "GATLINBURG 2 SW, TN|NEWFOUND GAP, TN|TOWNSEND 5S, TN": {
+                "data_source_sha1": "9ac0f28ce9662b6c1bd9f17a414169377a68f12c",
+                "exmae": 1.57645603
+            },
+            "GATLINBURG 2 SW, TN|TOWNSEND 5S, TN": {
+                "data_source_sha1": "8dcb6a9d961577c1796aa1361ad51dddcd9722d9",
+                "exmae": 1.616671691
+            },
+            "NEWFOUND GAP, TN": {
+                "data_source_sha1": "d9ec96942819121b6314196a0b572343055aa2c6",
+                "exmae": 1.550145674
+            },
+            "NEWFOUND GAP, TN|TOWNSEND 5S, TN": {
+                "data_source_sha1": "d2d05f27e1319d3a8157e11ea4cc2c4161f949d2",
+                "exmae": 2.436971933
+            },
+            "TOWNSEND 5S, TN": {
+                "data_source_sha1": "1149dcafcd4d66861c6a424f94a76104b17efd02",
+                "exmae": 2.140219193
+            }
+        },
+        "keymae": 0.980067357
+    },
+    "TRYON, NC": {
+        "data_source_sha1": "a1050fc51bfb4e222e867d8cb16ab265d97dec26",
+        "exogen": {
+            "CAESARS HEAD, SC": {
+                "data_source_sha1": "009dd711216f5b350fc7d5cc2c3e263aa6abf5fb",
+                "exmae": 3.107287252
+            },
+            "CAESARS HEAD, SC|CHESNEE 7 WSW, SC": {
+                "data_source_sha1": "78f5cb2fe63d128c70808b147c75323161aa01ae",
+                "exmae": 2.976286358
+            },
+            "CAESARS HEAD, SC|CHESNEE 7 WSW, SC|CLEVELAND 3S, SC": {
+                "data_source_sha1": "e52fe033e58ba5d03f783b01c7f66cc3263b6255",
+                "exmae": 2.995673409
+            },
+            "CAESARS HEAD, SC|CHESNEE 7 WSW, SC|CLEVELAND 3S, SC|SPARTANBURG 3 SSE, SC": {
+                "data_source_sha1": "daf1e33acb88f2418c8e3694a81c3dee6ab25298",
+                "exmae": 3.258738836
+            },
+            "CAESARS HEAD, SC|CHESNEE 7 WSW, SC|SPARTANBURG 3 SSE, SC": {
+                "data_source_sha1": "7a6ebbd2d8fd1684b23e681d0ec6257235ebc08c",
+                "exmae": 2.937057201
+            },
+            "CAESARS HEAD, SC|CLEVELAND 3S, SC": {
+                "data_source_sha1": "f8aff8a3d06727b5e66032ceecddf67c46051da1",
+                "exmae": 3.201893108
+            },
+            "CAESARS HEAD, SC|CLEVELAND 3S, SC|SPARTANBURG 3 SSE, SC": {
+                "data_source_sha1": "e462b00cf32e9a79915fe64887d086cb27ae9be8",
+                "exmae": 3.277737214
+            },
+            "CAESARS HEAD, SC|SPARTANBURG 3 SSE, SC": {
+                "data_source_sha1": "9960d70fde0beca48395fe08da7fb18fe7d222b3",
+                "exmae": 3.096819229
+            },
+            "CHESNEE 7 WSW, SC": {
+                "data_source_sha1": "65fba7fe07dd23fc611699c5eae01a2c5c96bdb8",
+                "exmae": 2.815911183
+            },
+            "CHESNEE 7 WSW, SC|CLEVELAND 3S, SC": {
+                "data_source_sha1": "9000535cfe364507a2ec537cdbfaab5840b40cd5",
+                "exmae": 2.990345866
+            },
+            "CHESNEE 7 WSW, SC|CLEVELAND 3S, SC|SPARTANBURG 3 SSE, SC": {
+                "data_source_sha1": "1ce04ee4e295b6b2d2196df519b1af29719f0126",
+                "exmae": 2.966722632
+            },
+            "CHESNEE 7 WSW, SC|SPARTANBURG 3 SSE, SC": {
+                "data_source_sha1": "aecb24ac8edb30305d151c6ef22c95faf50b48f8",
+                "exmae": 2.890486851
+            },
+            "CLEVELAND 3S, SC": {
+                "data_source_sha1": "ec63d033b5549b3311a2711ad5aa92b4f5105e8d",
+                "exmae": 3.077446177
+            },
+            "CLEVELAND 3S, SC|SPARTANBURG 3 SSE, SC": {
+                "data_source_sha1": "20df9c29b9d87b8e55b56a1b1ebb6c01f95a16cf",
+                "exmae": 3.043608575
+            },
+            "GREENVILLE-SPARTANBURG AREA, SC": {
+                "data_source_sha1": "ca5696e1aa06c4422340fa81bc9e9762cf3cad59",
+                "exmae": 2.98693181
+            },
+            "GREENVILLE-SPARTANBURG AREA, SC|CAESARS HEAD, SC": {
+                "data_source_sha1": "c1e82a0398528467553cfac53335bb2fbecad29f",
+                "exmae": 2.942549753
+            },
+            "GREENVILLE-SPARTANBURG AREA, SC|CAESARS HEAD, SC|CHESNEE 7 WSW, SC": {
+                "data_source_sha1": "ac05db9c8f1f93e1645db63bc217bac288943441",
+                "exmae": 2.903385928
+            },
+            "GREENVILLE-SPARTANBURG AREA, SC|CAESARS HEAD, SC|CHESNEE 7 WSW, SC|CLEVELAND 3S, SC": {
+                "data_source_sha1": "fee8650e0f9c01bba41ea359d333665fe91be728",
+                "exmae": 3.190416268
+            },
+            "GREENVILLE-SPARTANBURG AREA, SC|CAESARS HEAD, SC|CHESNEE 7 WSW, SC|CLEVELAND 3S, SC|SPARTANBURG 3 SSE, SC": {
+                "data_source_sha1": "aa288038d85f6c9255399cc1cd6e7d1052547668",
+                "exmae": 3.731134416
+            },
+            "GREENVILLE-SPARTANBURG AREA, SC|CAESARS HEAD, SC|CHESNEE 7 WSW, SC|SPARTANBURG 3 SSE, SC": {
+                "data_source_sha1": "d017742e4b69f71e02d41f4f3256d199765b92fd",
+                "exmae": 2.877195877
+            },
+            "GREENVILLE-SPARTANBURG AREA, SC|CAESARS HEAD, SC|CLEVELAND 3S, SC": {
+                "data_source_sha1": "e3551ad2e01dff3553eeace3c0811d456b6eda7d",
+                "exmae": 3.154525442
+            },
+            "GREENVILLE-SPARTANBURG AREA, SC|CAESARS HEAD, SC|CLEVELAND 3S, SC|SPARTANBURG 3 SSE, SC": {
+                "data_source_sha1": "a2f031cd83a957535ff2c9e2e8285e256f24efba",
+                "exmae": 3.029299919
+            },
+            "GREENVILLE-SPARTANBURG AREA, SC|CAESARS HEAD, SC|SPARTANBURG 3 SSE, SC": {
+                "data_source_sha1": "3f567777fca31ede18d32fcff286a9ab5c31303f",
+                "exmae": 2.931474767
+            },
+            "GREENVILLE-SPARTANBURG AREA, SC|CHESNEE 7 WSW, SC": {
+                "data_source_sha1": "8fa19426324b9b4911eb22606f861c5a4dca44ad",
+                "exmae": 2.860875157
+            },
+            "GREENVILLE-SPARTANBURG AREA, SC|CHESNEE 7 WSW, SC|CLEVELAND 3S, SC": {
+                "data_source_sha1": "9c97d71d9a882734683469f30750aae0c75dfff4",
+                "exmae": 2.971348655
+            },
+            "GREENVILLE-SPARTANBURG AREA, SC|CHESNEE 7 WSW, SC|CLEVELAND 3S, SC|SPARTANBURG 3 SSE, SC": {
+                "data_source_sha1": "6bd1908e44c33b132876d0c549d74939a1857eb7",
+                "exmae": 2.975167876
+            },
+            "GREENVILLE-SPARTANBURG AREA, SC|CHESNEE 7 WSW, SC|SPARTANBURG 3 SSE, SC": {
+                "data_source_sha1": "ed05fb191134161afa2f422639ced3c8a6449ac7",
+                "exmae": 2.868547567
+            },
+            "GREENVILLE-SPARTANBURG AREA, SC|CLEVELAND 3S, SC": {
+                "data_source_sha1": "f01b1840559ad8fb689d0ab82b753b471148dc90",
+                "exmae": 3.049632259
+            },
+            "GREENVILLE-SPARTANBURG AREA, SC|CLEVELAND 3S, SC|SPARTANBURG 3 SSE, SC": {
+                "data_source_sha1": "8044cadae57c6c9ac6c98371c7bdf55d3402cfc5",
+                "exmae": 3.016189039
+            },
+            "GREENVILLE-SPARTANBURG AREA, SC|SPARTANBURG 3 SSE, SC": {
+                "data_source_sha1": "8bef9c866a52a029021cc7af39c1088b4569e069",
+                "exmae": 2.91447761
+            },
+            "SPARTANBURG 3 SSE, SC": {
+                "data_source_sha1": "4480f5ae3f3c8c2e7ba25081eaec0b1cfd6d0d36",
+                "exmae": 2.812649002
+            }
+        },
+        "keymae": 2.68235075
+    },
+    "WAYNESVILLE 1 E, NC": {
+        "data_source_sha1": "8b742210542b53f716bcf82c555271e58f9a7cf4",
+        "exogen": {
+            "MT LECONTE, TN": {
+                "data_source_sha1": "c66a13b50a9c2b15f5f2fc6a1c2db3c0a8eb04a7",
+                "exmae": 2.067047383
+            },
+            "MT LECONTE, TN|NEWFOUND GAP, TN": {
+                "data_source_sha1": "6739e12ffcc2985603bc9012f7596c1a0f65c36d",
+                "exmae": 2.233999346
+            },
+            "NEWFOUND GAP, TN": {
+                "data_source_sha1": "d9ec96942819121b6314196a0b572343055aa2c6",
+                "exmae": 2.262076439
+            }
+        },
+        "keymae": 1.747482139
+    },
+    "WHITEVILLE 7 NW, NC": {
+        "data_source_sha1": "6641bbcefbe9f90cf7fa98fd27c4b08a756add27",
+        "exogen": {
+            "LORIS 2 S, SC": {
+                "data_source_sha1": "c2009965d85027e8f22e97eff74873d5cf88b017",
+                "exmae": 2.153186109
+            }
+        },
+        "keymae": 2.165116952
+    }
+}

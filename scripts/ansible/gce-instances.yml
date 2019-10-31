@@ -1,0 +1,80 @@
+---
+# rainfall-predictor-ansible
+- name: Create Compute Engine instance
+  hosts: local
+  gather_facts: False
+  vars_files:
+    - gce_vars/auth
+    - gce_vars/machines
+    - gce_vars/zone
+  tasks:
+    - name: Create a persistent data disk
+      gcp_compute_disk:
+        name: rpredict-disk
+        size_gb: 2
+        # disk_encryption_key:
+        #   raw_key: {{ persistent_disk_encryption_key }}
+        zone: "{{ zone }}"
+        project: "{{ project }}"
+        auth_kind: "{{ auth_kind }}"
+        service_account_file: "{{ credentials_file }}"
+        state: present
+      register: gce_pdisk
+
+    - name: Create an IP address for vm instance
+      gcp_compute_address:
+        name: "{{ name_zone }}-ip"
+        region: "{{ region }}"
+        project: "{{ project }}"
+        service_account_file: "{{ credentials_file }}"
+        auth_kind: "{{ auth_kind }}"
+        network_tier: PREMIUM
+      register: gce_ip
+
+    - name: Bring up the vm instance.
+      gcp_compute_instance:
+        name: "{{ name_zone }}"
+        machine_type: "{{ machine_type }}"
+        disks:
+          - auto_delete: true             # Boot image disk
+            boot: true
+            initialize_params:
+              source_image: "{{ image }}"
+          - auto_delete: false            # Connect persistent disk (unmounted)
+            device_name: "{{ gce_pdisk['name'] }}"
+            interface: SCSI
+            mode: READ_WRITE
+            source: "{{ gce_pdisk }}"
+            # disk_encryption_key:
+            #   raw_key: {{ persistent_disk_encryption_key }}
+        network_interfaces:
+          - access_configs:
+              - name: External NAT
+                nat_ip: "{{ gce_ip }}"
+                type: ONE_TO_ONE_NAT
+                # network_tier: STANDARD    # currently unsupported
+        metadata:
+          enable-oslogin: true
+        scopes:
+          - "https://www.googleapis.com/auth/compute"
+          - "https://www.googleapis.com/auth/devstorage.read_write"
+          - "https://www.googleapis.com/auth/logging.write"
+          - "https://www.googleapis.com/auth/monitoring.write"
+          - "https://www.googleapis.com/auth/trace.append"
+        tags:
+          items:
+            # - http-server
+            - rainfalld
+        zone: "{{ zone }}"
+        project: "{{ project }}"
+        service_account_file: "{{ credentials_file }}"
+        auth_kind: "{{ auth_kind }}"
+      register: gce
+
+  post_tasks:
+    - name: Wait for SSH for instances in first zone
+      wait_for: delay=1 host={{ gce_ip.address }} port=22 state=started timeout=240
+
+    - name: Save host data
+      add_host: hostname={{ gce_ip.address }} groupname=gce_instances_ips
+

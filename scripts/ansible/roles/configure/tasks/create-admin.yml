@@ -1,0 +1,26 @@
+---
+# configure
+- name: Build Administrator user
+  user:
+    name: admin
+    comment: "Administrator"
+    create_home: yes
+    groups: sudo
+    append: yes
+
+- name: Load password file
+  include_vars:
+    file: "{{ local_project_dir }}/bin/secrets.yml"
+    name: diary
+
+- name: Generate password hash locally          
+  # run on local workstation instead of remote
+  local_action: "command echo {{ diary.admin_secret | password_hash('sha512') }}"
+  become: false
+  register: password_hash
+
+- name: Set Admin password on remote
+  become: true
+  user:
+    name: admin
+    password: "{{ password_hash.stdout_lines[-1] }}"

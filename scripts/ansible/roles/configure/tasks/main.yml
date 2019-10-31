@@ -1,0 +1,10 @@
+---
+# configure
+- name: Check for local_project_dir pass in
+  fail: msg="Playbook requires passed in local_project_dir"
+  when: local_project_dir is not defined or not local_project_dir
+  
+- include: create-admin.yml
+- include: security-lockdown.yml
+- include: mount-persistent-disk.yml
+- include: create-app-service.yml

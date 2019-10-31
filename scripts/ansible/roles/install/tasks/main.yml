@@ -1,0 +1,109 @@
+---
+- name: local_project_dir not provided
+  fail: msg="Playbook requires passed in local_project_dir"
+  when: local_project_dir is not defined or not local_project_dir
+
+- name: Update repositories cache and install python3 and more packages
+  apt: 
+    name: "{{ packages }}"
+    update_cache: yes
+    cache_valid_time: 3600
+    autoclean: yes
+  vars:
+    packages:
+      - python3
+      - python3-pip
+      - apt-transport-https     # support apt HTTPS connections (needed for intel repo)
+      - ca-certificates         # support apt HTTPS connections (needed for intel repo)
+
+- name: Setup python alternatives (python3 as default)
+  alternatives:
+    name: python
+    link: /usr/bin/python
+    path: "{{ item.path }}"
+    priority: "{{ item.priority }}"
+  with_items:
+    - { priority: 27, path: "/usr/bin/python2.7" }
+    - { priority: 200, path: "/usr/bin/python2" }
+    - { priority: 35, path: "/usr/bin/python3.5" }
+    - { priority: 300, path: "/usr/bin/python3" }
+
+- name: Ensure auto-mode (priority order) for python alternatives
+  command: update-alternatives --auto python
+
+- name: Setup pip alternatives (pip3 as default)
+  alternatives:
+    name: pip
+    link: /usr/bin/pip
+    path: /usr/bin/pip3
+    priority: 300
+
+- name: Create app directory
+  file: 
+    path: "{{ item }}"
+    state: directory
+    owner: root
+    group: root
+    mode: 0775
+  with_items:
+    - "{{ app_dir }}"
+    - "{{ app_dir }}/config"
+    - /var/log/rainfall-predictor
+
+- name: Copy app dependency definition files and install script
+  copy: 
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+    mode: "{{ item.mode }}"
+  with_items:
+    - { src: "{{ local_project_dir }}/requirements.txt", dest: "{{ app_dir }}", mode: '0644' }
+    - { src: "{{ local_project_dir }}/requirements-intelpython.txt", dest: "{{ app_dir }}", mode: '0644' }
+    - { src: "{{ local_project_dir }}/dockerconfig/install_IntelMKL.sh", dest: "{{ app_dir }}/config", mode: '0774' }
+
+- name: Install special library for machine learning
+  command: "{{ app_dir }}/config/install_IntelMKL.sh"
+
+- name: Install app python dependencies
+  command: "pip install --no-cache-dir -r {{app_dir}}/requirements.txt"
+
+- name: Install IntelPython library
+  command: "pip install --no-cache-dir -r {{app_dir}}/requirements-intelpython.txt"
+
+- name: Copy core app code
+  copy: 
+    src: "{{ item.src }}"
+    dest: "{{ item.dest }}"
+    mode: "{{ item.mode }}"
+  with_items:
+    - { src: "{{ local_project_dir }}/build/", dest: "{{ app_dir }}", mode: '0444' }
+    - { src: "{{ local_project_dir }}/data/", dest: "{{ app_dir }}/data", mode: '0444' }
+    - { src: "{{ local_project_dir }}/VERSION", dest: "{{ app_dir }}", mode: '0444' }
+
+- name: Create executable inside /usr/bin
+  file:
+    src: "{{ item.src }}"
+    path: "{{ item.path }}"
+    state: "{{ item.state }}"
+    mode: "{{ item.mode }}"
+  with_items:
+    - { state: file, path: "{{ app_dir }}/main.py", mode: "0555", src: "" }
+    - { state: link, src: "{{ app_dir }}/main.py", path: "/usr/bin/rainfall-predictor", mode: "0555" }
+
+- name: Build system daemon user
+  user:
+    name: rainfalld
+    comment: "Rainfall Estimation System Daemon"
+    create_home: yes
+    home: "/var/cache/rainfall-predictor"
+    group: daemon
+    system: yes
+
+- name: Enable log location for daemon
+  file:
+    path: "/var/log/rainfall-predictor"
+    owner: rainfalld 
+
+- name: Cleanup installation
+  file:
+    state: absent
+    path: "{{ app_dir }}/config"

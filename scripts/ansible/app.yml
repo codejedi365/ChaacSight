@@ -1,0 +1,18 @@
+---
+# rainfall-predictor-ansible
+- name: Install Rainfall Predictor app
+  hosts: gce_instances_ips
+  become: yes
+  become_user: root
+  become_method: sudo
+  roles:
+    - install
+    - configure
+    
+- name: Deploy Rainfall Predictor app
+  hosts: gce_instances_ips
+  become: yes
+  become_user: root
+  become_method: sudo
+  roles:
+    - run

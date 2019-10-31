@@ -1,0 +1,11 @@
+---
+# configure
+- name: Create app service file
+  template: src=default.service dest=/etc/systemd/system/rainfall-predictor.service
+  vars:
+    app_name: "Rainfall Predictor"
+    app_daemon: rainfalld
+    app_exec_path: /usr/bin/rainfall-predictor
+
+- name: Register app service to start on boot
+  command: systemctl enable rainfall-predictor

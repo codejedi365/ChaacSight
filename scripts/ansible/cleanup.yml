@@ -1,0 +1,25 @@
+---
+- name: Destroy all rainfall-estimation resources
+  hosts: local
+  gather_facts: False
+  vars_files:
+    - gce_vars/auth
+    - gce_vars/machines
+    - gce_vars/zone
+  tasks:
+    - name: Delete the instance
+      gcp_compute_instance:
+        name: "{{ name_zone }}"
+        zone: "{{ zone }}"
+        project: "{{ project }}"
+        service_account_file: "{{ credentials_file }}"
+        auth_kind: "{{ auth_kind }}"
+        state: absent
+    - name: Delete the static ip address
+      gcp_compute_address:
+        name: "{{ name_zone }}-ip"
+        region: "{{ region }}"
+        project: "{{ project }}"
+        service_account_file: "{{ credentials_file }}"
+        auth_kind: "{{ auth_kind }}"
+        state: absent

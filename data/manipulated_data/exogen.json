@@ -1,0 +1,243 @@
+{
+    "ALBEMARLE, NC": [
+        "CHESTERFIELD 3 E, SC",
+        "CHERAW, SC",
+        "PAGELAND 9.0 WNW, SC",
+        "FORT MILL 4 NW, SC"
+    ],
+    "ARCOLA, NC": [
+        "JOHN KERR DAM, VA",
+        "EMPORIA, VA"
+    ],
+    "ASHEVILLE AIRPORT, NC": [
+        "CAESARS HEAD, SC",
+        "CLEVELAND 3S, SC"
+    ],
+    "BANNER ELK, NC": [
+        "ELIZABETHTON, TN",
+        "ERWIN 1 W, TN",
+        "ROAN MOUNTAIN 3SW, TN"
+    ],
+    "BEECH MOUNTAIN, NC": [
+        "BRISTOL AP, TN",
+        "ELIZABETHTON, TN",
+        "ERWIN 1 W, TN",
+        "ROAN MOUNTAIN 3SW, TN"
+    ],
+    "BOONE 1 SE, NC": [
+        "ROAN MOUNTAIN 3SW, TN"
+    ],
+    "BREVARD, NC": [
+        "PICKENS AREA, SC",
+        "CAESARS HEAD, SC",
+        "CLEVELAND 3S, SC"
+    ],
+    "BRYSON CITY 4, NC": [
+        "GATLINBURG 2 SW, TN",
+        "MT LECONTE, TN",
+        "NEWFOUND GAP, TN",
+        "TOWNSEND 5S, TN"
+    ],
+    "BURLINGTON, NC": [
+        "CHATHAM, VA",
+        "MARTINSVILLE FILTER PLANT, VA",
+        "SOUTH BOSTON, VA"
+    ],
+    "CASAR, NC": [
+        "CHESNEE 7 WSW, SC",
+        "GAFFNEY 6 E, SC"
+    ],
+    "CHARLOTTE AREA, NC": [
+        "CATAWBA, SC",
+        "FORT MILL 4 NW, SC"
+    ],
+    "COWEETA EXP STATION, NC": [
+        "LONG CREEK, SC",
+        "WALHALLA, SC",
+        "CLAYTON 1 SSW, GA",
+        "HELEN, GA",
+        "SAUTEE 3W, GA"
+    ],
+    "CULLOWHEE, NC": [
+        "MT LECONTE, TN",
+        "NEWFOUND GAP, TN"
+    ],
+    "DANBURY, NC": [
+        "MARTINSVILLE FILTER PLANT, VA",
+        "MEADOWS OF DAN 5 SW, VA",
+        "STUART, VA"
+    ],
+    "EDEN, NC": [
+        "CHATHAM, VA",
+        "MARTINSVILLE FILTER PLANT, VA",
+        "STUART, VA"
+    ],
+    "ENFIELD, NC": [
+        "JOHN KERR DAM, VA",
+        "EMPORIA, VA"
+    ],
+    "FOREST CITY 8 W, NC": [
+        "CHESNEE 7 WSW, SC",
+        "GAFFNEY 6 E, SC",
+        "SPARTANBURG 3 SSE, SC"
+    ],
+    "FRANKLIN, NC": [
+        "LONG CREEK, SC",
+        "CLAYTON 1 SSW, GA",
+        "NEWFOUND GAP, TN"
+    ],
+    "GASTONIA, NC": [
+        "FORT MILL 4 NW, SC",
+        "GAFFNEY 6 E, SC"
+    ],
+    "GRANDFATHER MTN, NC": [
+        "ELIZABETHTON, TN",
+        "ROAN MOUNTAIN 3SW, TN"
+    ],
+    "GREENSBORO AP, NC": [
+        "MARTINSVILLE FILTER PLANT, VA",
+        "MEADOWS OF DAN 5 SW, VA",
+        "STUART, VA"
+    ],
+    "HAYESVILLE 1 NE, NC": [
+        "CLAYTON 1 SSW, GA",
+        "BLAIRSVILLE EXP STA, GA",
+        "HELEN, GA",
+        "SAUTEE 3W, GA"
+    ],
+    "HENDERSON 2 NNW, NC": [
+        "SOUTH BOSTON, VA",
+        "JOHN KERR DAM, VA"
+    ],
+    "HENDERSONVILLE 1 NE, NC": [
+        "CAESARS HEAD, SC",
+        "CLEVELAND 3S, SC"
+    ],
+    "HIGHLANDS, NC": [
+        "PICKENS AREA, SC",
+        "LONG CREEK, SC",
+        "WALHALLA, SC",
+        "CLAYTON 1 SSW, GA"
+    ],
+    "HOT SPRINGS, NC": [
+        "ERWIN 1 W, TN",
+        "GREENEVILLE EXP STA, TN",
+        "NEWPORT 1 NW, TN"
+    ],
+    "JACKSON SPRINGS 5 WNW, NC": [
+        "CHESTERFIELD 3 E, SC",
+        "CHERAW, SC",
+        "PAGELAND 9.0 WNW, SC"
+    ],
+    "KING, NC": [
+        "STUART, VA"
+    ],
+    "LAKE LURE 2, NC": [
+        "CHESNEE 7 WSW, SC",
+        "CLEVELAND 3S, SC"
+    ],
+    "LAKE TOXAWAY 2 SW, NC": [
+        "PICKENS AREA, SC",
+        "CAESARS HEAD, SC",
+        "CLEVELAND 3S, SC",
+        "LONG CREEK, SC",
+        "WALHALLA, SC"
+    ],
+    "LAURINBURG, NC": [
+        "DARLINGTON, SC",
+        "DILLON, SC",
+        "FLORENCE REGIONAL AIRPORT, SC",
+        "FLORENCE 8 NE, SC",
+        "CHESTERFIELD 3 E, SC",
+        "CHERAW, SC"
+    ],
+    "LONGWOOD, NC": [
+        "LORIS 2 S, SC",
+        "MYRTLE BEACH AREA, SC"
+    ],
+    "LUMBERTON AREA, NC": [
+        "DILLON, SC"
+    ],
+    "MARSHALL, NC": [
+        "ERWIN 1 W, TN",
+        "GREENEVILLE EXP STA, TN",
+        "NEWPORT 1 NW, TN"
+    ],
+    "MONROE 2 SE, NC": [
+        "PAGELAND 9.0 WNW, SC",
+        "CATAWBA, SC",
+        "FORT MILL 4 NW, SC"
+    ],
+    "MOUNT AIRY 2 W, NC": [
+        "MEADOWS OF DAN 5 SW, VA",
+        "STUART, VA"
+    ],
+    "MOUNT HOLLY 4 NE, NC": [
+        "CATAWBA, SC",
+        "CHESNEE 7 WSW, SC",
+        "CHESTER 1 SE, SC",
+        "FORT MILL 4 NW, SC",
+        "GAFFNEY 6 E, SC",
+        "LOCKHART, SC"
+    ],
+    "MOUNT MITCHELL AREA, NC": [
+        "ERWIN 1 W, TN"
+    ],
+    "MURFREESBORO, NC": [
+        "EMPORIA, VA"
+    ],
+    "MURPHY 4ESE, NC": [
+        "BLAIRSVILLE EXP STA, GA"
+    ],
+    "OCONALUFTEE, NC": [
+        "GATLINBURG 2 SW, TN",
+        "MT LECONTE, TN",
+        "NEWFOUND GAP, TN",
+        "TOWNSEND 5S, TN"
+    ],
+    "PISGAH FOREST 3 NE, NC": [
+        "PICKENS AREA, SC",
+        "CAESARS HEAD, SC",
+        "CLEVELAND 3S, SC"
+    ],
+    "REIDSVILLE 2 NW, NC": [
+        "MARTINSVILLE FILTER PLANT, VA"
+    ],
+    "ROANOKE RAPIDS, NC": [
+        "EMPORIA, VA"
+    ],
+    "ROBBINSVILLE AG 5 NE, NC": [
+        "MT LECONTE, TN",
+        "NEWFOUND GAP, TN",
+        "TOWNSEND 5S, TN"
+    ],
+    "ROSMAN, NC": [
+        "PICKENS AREA, SC",
+        "CAESARS HEAD, SC",
+        "CLEVELAND 3S, SC",
+        "WALHALLA, SC"
+    ],
+    "SHELBY 2 NW, NC": [
+        "CHESNEE 7 WSW, SC",
+        "GAFFNEY 6 E, SC"
+    ],
+    "TAPOCO, NC": [
+        "GATLINBURG 2 SW, TN",
+        "NEWFOUND GAP, TN",
+        "TOWNSEND 5S, TN"
+    ],
+    "TRYON, NC": [
+        "GREENVILLE-SPARTANBURG AREA, SC",
+        "CAESARS HEAD, SC",
+        "CHESNEE 7 WSW, SC",
+        "CLEVELAND 3S, SC",
+        "SPARTANBURG 3 SSE, SC"
+    ],
+    "WAYNESVILLE 1 E, NC": [
+        "MT LECONTE, TN",
+        "NEWFOUND GAP, TN"
+    ],
+    "WHITEVILLE 7 NW, NC": [
+        "LORIS 2 S, SC"
+    ]
+}

@@ -1,0 +1,5 @@
+---
+# Variables defined for us-central1-a
+name_zone: high-cpu-cluster-1
+zone: us-central1-a
+region: us-central1

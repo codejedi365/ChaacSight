@@ -1,0 +1,5 @@
+# IntelPython specific dependencies
+# Must load after Cython, numpy
+https://github.com/IntelPython/mkl_fft/archive/v1.0.14.zip
+https://github.com/IntelPython/mkl_random/archive/v1.0.2.zip
+https://github.com/IntelPython/mkl-service/archive/v2.0.2.zip

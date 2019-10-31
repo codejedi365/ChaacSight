@@ -1,0 +1,5 @@
+---
+# Google Compute Engine required authentication global variables
+project: rainfall-estimation
+credentials_file: ~/.config/gcloud/srvaccts/rainfall-estimation-53814320583f.json
+auth_kind: serviceaccount

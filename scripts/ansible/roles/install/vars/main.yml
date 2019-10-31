@@ -1,0 +1,5 @@
+---
+# Default vars
+
+app_dir: /usr/src/rainfall-predictor
+

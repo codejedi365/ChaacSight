@@ -1,0 +1,4 @@
+---
+# default vars
+log_agent: true
+sys_agent: true

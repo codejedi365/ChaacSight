@@ -1,0 +1,17 @@
+[Unit]
+Description={{ app_name }} service
+After=network.target
+StartLimitBurst=5
+StartLimitIntervalSec=20
+StartLimitAction=reboot
+
+[Service]
+Type=simple
+Nice=-15
+Restart=always
+RestartSec=2
+User={{ app_daemon }}
+ExecStart={{ app_exec_path }}
+
+[Install]
+WantedBy=multi-user.target
