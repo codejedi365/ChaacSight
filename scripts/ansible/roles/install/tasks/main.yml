@@ -47,10 +47,9 @@
     mode: 0775
   with_items:
     - "{{ app_dir }}"
-    - "{{ app_dir }}/config"
     - /var/log/rainfall-predictor
 
-- name: Copy app dependency definition files and install script
+- name: Copy app dependency definition files
   copy: 
     src: "{{ item.src }}"
     dest: "{{ item.dest }}"
@@ -58,10 +57,11 @@
   with_items:
     - { src: "{{ local_project_dir }}/requirements.txt", dest: "{{ app_dir }}", mode: '0644' }
     - { src: "{{ local_project_dir }}/requirements-intelpython.txt", dest: "{{ app_dir }}", mode: '0644' }
-    - { src: "{{ local_project_dir }}/dockerconfig/install_IntelMKL.sh", dest: "{{ app_dir }}/config", mode: '0774' }
 
 - name: Install special library for machine learning
-  command: "{{ app_dir }}/config/install_IntelMKL.sh"
+  script: install_IntelMKL.sh
+  args:
+    executable: bash
 
 - name: Install app python dependencies
   command: "pip install --no-cache-dir -r {{app_dir}}/requirements.txt"
@@ -103,7 +103,3 @@
     path: "/var/log/rainfall-predictor"
     owner: rainfalld 
 
-- name: Cleanup installation
-  file:
-    state: absent
-    path: "{{ app_dir }}/config"
