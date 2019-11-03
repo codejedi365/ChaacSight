@@ -1,0 +1,8 @@
+# OS files
+.DS_Store
+~*
+
+# Project Specific files
+bin
+build
+secrets.yml
