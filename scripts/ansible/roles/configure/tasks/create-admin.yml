@@ -10,7 +10,7 @@
 
 - name: Load password file
   include_vars:
-    file: "{{ local_project_dir }}/bin/secrets.yml"
+    file: vars/secrets.yml
     name: diary
 
 - name: Generate password hash locally          

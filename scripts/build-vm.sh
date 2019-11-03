@@ -66,7 +66,14 @@ print_banner() {
 check_prereqs() {
 	missing_prereqs=0
 	command -v ansible >/dev/null 2>&1 || { ((missing_prereqs++)); echo >&2 "MISSING PREREQ: ansible is not installed but is required."; }
-	# List additional prereqs here
+	local secretsfile="scripts/ansible/roles/configure/vars/secrets.yml"
+	if [ -f "$DIRNAME/$secretsfile" ]; then
+		if [ -z "$(egrep '^admin_secret:[A-Za-z0-9 @#$%^&*()~.,:;_+=<>?-]+$' "$DIRNAME/$secretsfile")" ]; then
+			((missing_prereqs++)); echo >&2 "PREREQ ERROR: secrets.yml file must match syntax 'admin_secret: password' (no quotes).";
+		fi
+	else
+		((missing_prereqs++)); echo >&2 "MISSING PREREQ: $(basename "$DIRNAME")/$secretsfile file missing.";
+	fi
 	return "$missing_prereqs"
 }
 

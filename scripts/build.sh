@@ -47,15 +47,7 @@ print_banner() {
 
 check_prereqs() {
 	missing_prereqs=0
-	command -v jupyter >/dev/null 2>&1 || { ((missing_prereqs++)); echo >&2 "MISSING PREREQ: jupyter is not installed but is required."; }
-	if [ -f "$DIRNAME/dockerconfig/.admin.secret" ]; then
-		if [ -z "$(egrep '^admin:[A-Za-z0-9 @#$%^&*()~.,:;_+=<>?-]+$' "$DIRNAME/dockerconfig/.admin.secret")" ]; then
-			((missing_prereqs++)); echo >&2 "PREREQ ERROR: .admin.secret file must match syntax 'admin:password' (no quotes).";
-		fi
-	else
-		((missing_prereqs++)); echo >&2 "MISSING PREREQ: $(basename "$DIRNAME")/dockerconfig/.admin.secret file missing.";
-	fi
-	
+	command -v jupyter >/dev/null 2>&1 || { ((missing_prereqs++)); echo >&2 "MISSING PREREQ: jupyter is not installed but is required."; }	
 	return "$missing_prereqs"
 }
 
