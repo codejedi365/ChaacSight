@@ -1,46 +1,52 @@
 #!/bin/bash
 #
-# FILE: dockerify.sh
+# FILE: build-vm.sh
 #=========================================
-# Instructions to build Docker container
+# Google Compute Engine VM build & deploy script.
 #
 # Usage:
-#	$> ./dockerify.sh [options]
+#	$> ./build-vm.sh [options]
 # 
 # For Options, see help
-#   $> ./dockerify.sh --help
+#   $> ./build-vm.sh --help
 #=========================================
 
 DIRNAME="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd )" && DIRNAME="${DIRNAME%/scripts}";
 BUILD_DIR="build"
 IMAGE_DIR="bin"
-AUTHOR="lilfetz22"
-REPO=""
 [ -z "$NAME" ] && NAME="rainfall-predictor"
 
 usage() {
-	echo "Usage: ./$(basename "$0") [-q | --quiet] [--no-rebuild] [--keep-version]" 1>&2;
+	echo "Usage: ./$(basename "$0") [-q | --quiet] [--no-autostart] [-r <type> | --release=<type>]" 1>&2;
+	echo "       ./$(basename "$0") [-q | --quiet] [--no-rebuild] [--keep-version]" 1>&2;
+	echo "       ./$(basename "$0") [--destroy]" 1>&2;
 	echo "       ./$(basename "$0") [-h | --help]" 1>&2;
 	exit 1;
 }
 help() {
     echo ""
-    echo " Rainfall Predictor Docker Creation Script "
-    echo "-------------------------------------------"
-    echo "Docker build script.  Docker packages app files, tags with version and" \
-		 "saves Docker container image." \
-    	 "Docker image files are saved to the ${DIRNAME%/}/$IMAGE_DIR directory.";
+    echo " Rainfall Predictor VM Creation Script "
+    echo "---------------------------------------"
+    echo "Google Compute Engine VM build & deploy script.  Ansible provisions a GCE instance" \
+		 "with a persistent disk, static IP, and Debian OS.  Once created, Ansible installs" \
+    	 "the required app dependencies, configures the OS, and installs the app as a service" \
+		 "named ${NAME}.service.  Autostart of the service is the default but can be" \
+		 "toggled off with the provided option flag.  Login information will be provided after" \
+		 "build and deploy succeeds.  Reverse & clean resources by running with the --destroy flag";
     usage | echo;
 	echo "";
     echo "Available Options: "
-    echo "  -h | --help   Help"
-	echo "  -q | --quiet  Execute quietly except for errors"
-	echo "  --no-rebuild  Makes container with current ./build files, fails if empty"
+    echo "  -h | --help     Help"
+	echo "  -q | --quiet    Execute quietly except for errors"
+	echo "  -r <type> | --release=<type>   Type of release either Major, Minor, or Update"
+	echo "                     DEFAULT: Minor, update version number only";
+	echo "  --destroy       Removes a deployed VM and releases GCE resouces"
+	echo "  --no-autostart  Complete ansible build except for autorun of service"
+	echo "  --no-rebuild    Makes container with current ./build files, fails if empty"
 	echo "  --keep-version  Does not increment version number update field 1.1.X"
     echo "";
 	echo "DEFAULT VARS:";
-	echo "  AUTHOR: $AUTHOR";
-	echo "  IMAGE_NAME: $NAME:latest"
+	# echo "  IMAGE_NAME: $NAME:latest"
 	echo "  BUILD_DIR: $(basename "$DIRNAME")/$BUILD_DIR";
 	echo "";
     # echo "ENVIRONMENT VARS:"
@@ -50,9 +56,9 @@ help() {
 }
 print_banner() {
 	echo "";
-    echo "====================================";
-    echo "|   Dockerify Rainfall Predictor   |";
-    echo "====================================";
+    echo "=========================================";
+    echo "|   VM Builder for Rainfall Predictor   |";
+    echo "=========================================";
 	echo "START: $(date)";
 	echo "";
 }
@@ -79,6 +85,32 @@ process_args() {
 			-q|--quiet)
 				MODE_QUIET=true
 				;;
+			-r|--release)
+				if [ "$2" ] && [ -n "$(echo "$2" | grep -iE "^(major|minor|update)$")" ]; then
+					RELEASE_TYPE="${2}";
+					shift
+				else
+					usage;
+				fi
+				;;
+			"--release"=?*)
+				OPTARG=${1#*=} 			# Delete everything up to "=" and keep the remainder.
+				if [ -n "$(echo "$OPTARG" | grep -iE "^(major|minor|update)$")" ]; then
+					RELEASE_TYPE="${OPTARG}";
+					shift
+				else
+					usage;
+				fi
+				;;
+			"--release"=)						# Handle the case of an empty --release=
+				usage;
+				;;
+			--destroy)
+				DESTROY=true
+				;;
+			--no-autostart)
+				AUTOSTART=false
+				;;
 			--no-rebuild)
 				REBUILD=false
 				;;
@@ -100,10 +132,17 @@ process_args() {
 	done
 		
 	## // If-statements to check if interdependent options are satisfied // ##
-	
+	if [ -n "$RELEASE_TYPE" ]; then
+		BUMP_VERSION=true;
+		BUMP_VER_SIZE="${RELEASE_TYPE}";
+	fi
+
 	## // IF-statements to fill all vars with defaults if not already filled // ##
+	[ -z "$AUTOSTART" ] && AUTOSTART=true
+	[ -z "$DESTROY" ] && DESTROY=false
 	[ -z "$REBUILD" ] && REBUILD=true
 	[ -z "$BUMP_VERSION" ] && BUMP_VERSION=true
+	[ -z "$BUMP_VER_SIZE" ] && BUMP_VER_SIZE="minor"
 	[ -z "$MODE_QUIET" ] && MODE_QUIET=false
 
 }
@@ -122,90 +161,113 @@ main() {
 
 	SCRIPT_STARTS="$(timestamp)";
 
+	if [ $DESTROY = true ]; then
+		ANSIBLE_CONFIG="${DIRNAME}/scripts/ansible/ansible.cfg"
+		ENV_VARS="ANSIBLE_CONFIG=${ANSIBLE_CONFIG}"
+
+		/bin/bash -c "$ENV_VARS ansible-playbook $DIRNAME/scripts/ansible/cleanup.yml" &
+		ansiblePID=$!
+		trap "ps -p $ansiblePID > /dev/null && kill $ansiblePID" ERR EXIT
+		wait $ansiblePID
+		exit_status=$?
+
+		# Handle Ansible build status 
+		if [ $exit_status != 0 ]; then
+			echo "[VM DESTROY] Error occured.  Aborting..." >&2 && echo && exit 1;
+		fi
+
+		SCRIPT_STOPS="$(timestamp)"
+		echo "[VM DESTROY] Total Execution Time: $(($SCRIPT_STOPS-$SCRIPT_STARTS)) seconds" && echo;
+		echo "Google Cloud Resources Summary: "
+		echo "------------------------------- "
+		echo "   Compute Instance: RELEASED"
+		echo "   Static IP: RELEASED"
+		echo "   Persistent Data Disk: 1 Resource Allocated ($)" && echo
+		return 0
+	fi
+
 	if [ $REBUILD = true ]; then
 		# ensure build files are up to date
-		echo "[DOCKERIFY] Running code build script...";
+		echo "[VM BUILD] Running code build script...";
 		BUILD_SCRIPT_STARTS=$(timestamp)
 		BUILD_DIR="$BUILD_DIR" "$DIRNAME/scripts/build.sh" &
 		pid=$!
-		wait $pid || { echo "[DOCKERIFY] build failed. Aborting..." 2>&2 && echo && exit 1; }
+		wait $pid || { echo "[VM BUILD] build failed. Aborting..." 2>&2 && echo && exit 1; }
 		BUILD_SCRIPT_STOPS=$(timestamp)
-		echo "[DOCKERIFY] Code Build completed! ($(($BUILD_SCRIPT_STOPS-$BUILD_SCRIPT_STARTS)) seconds)" && echo;
+		echo "[VM BUILD] Code Build completed! ($(($BUILD_SCRIPT_STOPS-$BUILD_SCRIPT_STARTS)) seconds)" && echo;
 
 	elif [ -z "$(ls -al "$DIRNAME/$BUILD_DIR" | egrep --invert-match '^(.*[ ]((\.)|(\.\.))$)|(total.*$)')" ]; then
 		# build folder is empty
 		echo "MISSING FILES: build directory is empty." >&2 && echo && exit 1;
 	fi
 
-	if [ ! -d "$DIRNAME/$IMAGE_DIR" ]; then
-		echo "[DOCKERIFY] Creating Directory: "
-		echo -n "[DOCKERIFY]   " && echo "$DIRNAME/$IMAGE_DIR"	# macosx mkdir -p -v [path] fails, is official bug
-		mkdir -p "$DIRNAME/$IMAGE_DIR"
-
-	elif [ -z "$(ls -al "$DIRNAME/$IMAGE_DIR" | egrep --invert-match '^(.*[ ]((\.)|(\.\.))$)|(total.*$)')" ]; then
-		rm -rvf "$DIRNAME/$IMAGE_DIR"/*			# clean out image directory
-	fi
-
 	if [ $BUMP_VERSION = true ]; then
-		"$DIRNAME/scripts/bump-version.py" "update" 
+		"$DIRNAME/scripts/bump-version.py" "$BUMP_VER_SIZE" 
 		if [ "$?" != 0 ]; then
-			echo "[DOCKERIFY] Error occured. Aborting..." >&2 && echo && exit 1;
+			echo "[VM BUILD] Error occured. Aborting..." >&2 && echo && exit 1;
 		else
 			echo && sleep 2s		# Dramatic effect
 		fi
 	fi
 
-	# VERSION="v$(cat "$DIRNAME/VERSION")"
-	# [ -z $VERSION ] && TAG="$NAME:latest" || TAG="$NAME:$VERSION";
-	TAG="$NAME:latest";
-
-	IMAGE_NAME="$(echo "$TAG" | awk -F "[:]" 'BEGIN{OFS="_"} {print $1,$2}')"
-
 	echo "[APP_DEPLOY] Deploying application to Google Cloud Compute Instance...";
 	# ansible build [ host_ips, deployment YAML ]
-	echo "[APP_DEPLOY] " \
-		 ". ansible-playbook" \
-			--extra-vars "local_project_dir=${DIRNAME%/}" \
+	# Parameters
+	ANSIBLE_CONFIG="${DIRNAME}/scripts/ansible/ansible.cfg"
+	PLAYBOOK_VARS=("local_project_dir=${DIRNAME%/}")
+	if [ $AUTOSTART == false ]; then
+		PLAYBOOK_VARS+=("app_autostart=false")
+	fi
+
+	EXTRA_VARS=""  # combine any vars into ansible variable string
+	for iVar in ${PLAYBOOK_VARS[@]}; do
+		if [ -n "$iVar" ]; then
+			if [ -z "$EXTRA_VARS" ]; then
+				EXTRA_VARS="$iVar"
+			else
+				EXTRA_VARS="${EXTRA_VARS} $iVar"
+			fi
+		fi
+	done
+	[ -n "$EXTRA_VARS" ] && EXTRA_VARS="--extra-vars \"${EXTRA_VARS}\""
+
+	# Logging steps
+	echo "[APP_DEPLOY] Set ANSIBLE_CONFIG=${ANSIBLE_CONFIG}"
+	ENV_VARS="ANSIBLE_CONFIG=${ANSIBLE_CONFIG}"
+	echo "[APP_DEPLOY]" \
+		 "$> $ENV_VARS ansible-playbook" \
+			"${EXTRA_VARS}" \
 			"$DIRNAME/scripts/ansible/deploy-app-vm.yml"
 	
 	# actual command
-	DOCKER_BUILD_STARTS="$(timestamp)"
-	ANSIBLE_CONFIG="${DIRNAME}/scripts/ansible/ansible.cfg"
-	source ansible-playbook \
-		--extra-vars "local_project_dir=${DIRNAME%/}" \
-		"$DIRNAME/scripts/ansible/deploy-app-vm.yml"
+	ANSIBLE_BUILD_STARTS="$(timestamp)"
+	/bin/bash -c "$ENV_VARS ansible-playbook $EXTRA_VARS $DIRNAME/scripts/ansible/deploy-app-vm.yml" &
+	ansiblePID=$!
+	trap "ps -p $ansiblePID > /dev/null && kill $ansiblePID" ERR EXIT
+	wait $ansiblePID
+	exit_status=$?
 
-	# Handle Docker build status 
-	if [ "$?" != 0 ]; then
-		echo "[DOCKERIFY] Error occured.  Aborting..." >&2 && echo && exit 1;
+	# Handle Ansible build status 
+	if [ $exit_status != 0 ]; then
+		echo "[VM BUILD] Error occured.  Aborting..." >&2 && echo && exit 1;
 	fi
 
-	DOCKER_BUILD_STOPS="$(timestamp)"
+	ANSIBLE_BUILD_STOPS="$(timestamp)"
 
-	IMAGE_SIZE="$(docker images | awk -F "[ ][ ]+" '{print $5}' | awk 'NR==2')"
-	echo && echo "[DOCKERIFY] Docker Image ($IMAGE_SIZE) built in $(($DOCKER_BUILD_STOPS-$DOCKER_BUILD_STARTS)) seconds.";
-
-	echo "[DOCKERIFY] compressing image..."
-	docker save "$TAG" | gzip > "$DIRNAME/$IMAGE_DIR/$IMAGE_NAME.tar.gz"
-	ZIPPED_SIZE="$(ls -lh "$DIRNAME/$IMAGE_DIR/$IMAGE_NAME.tar.gz" | awk -F "[ ]+" '{print $5}')"
-	echo "[DOCKERIFY] SUCCESS: Compressed Docker image (${ZIPPED_SIZE}B) saved as $IMAGE_DIR/$IMAGE_NAME.tar.gz";
-	echo "$(sha256sum "$DIRNAME/$IMAGE_DIR/$IMAGE_NAME.tar.gz")" > "$DIRNAME/$IMAGE_DIR/sha256.checksum"
-	echo "[DOCKERIFY] sha256: $(cat "$DIRNAME/$IMAGE_DIR/sha256.checksum" | awk -F "[ ]+" '{print $1}')"
+	echo && echo "[VM BUILD] GCE VM deployed in $(($ANSIBLE_BUILD_STOPS-$ANSIBLE_BUILD_STARTS)) seconds.";
 
 	SCRIPT_STOPS="$(timestamp)"
-	echo "[DOCKERIFY] Total Execution Time: $(($SCRIPT_STOPS-$SCRIPT_STARTS)) seconds" && echo;
+	echo "[VM BUILD] Total Execution Time: $(($SCRIPT_STOPS-$SCRIPT_STARTS)) seconds" && echo;
 	# Instructions
-	echo "  NEXT STEPS  "
+	echo "  APP STATUS  "
 	echo " ------------ "
-	echo "1. Connect to docker server instance.";
-	echo "2. Unzip file with gzip.";
-	echo "3. Load this docker image with the command: "
-	echo "     $ docker load -i <path/to/$IMAGE_NAME.tar>"
+	echo "SERVICE=${NAME}.service";
+	echo "APP=$($AUTOSTART && echo 'RUNNING' || echo 'INSTALLED')";
+	echo "TO CONNECT:"
+	echo "     $> ssh -i ~/.ssh/srvacct-gce sa_117909082819485756837@ip"
+	echo "     --or--";
+	echo "     $> open http://ip";
 	echo "";
-	# echo "OR";
-	# echo "1. Run Deploy script";
-	# echo "     $ ./scripts/deploy.sh <target_environment>"
-	# echo "";
 }
 
 keep_awake() {
@@ -220,6 +282,7 @@ keep_awake() {
 	elif [[ "$OSTYPE" == "darwin"* ]]; then		# Mac OSX
 		$1 &
 		pid=$!
+		trap "ps -p $pid > /dev/null && kill $pid" ERR EXIT
 		caffeinate -i -w $pid
 		wait $pid
 		exit_status="$?"

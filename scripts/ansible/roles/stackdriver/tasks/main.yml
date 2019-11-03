@@ -10,8 +10,8 @@
 
 - name: Install application default credentials
   copy:
-    src: "{{ host_vars['localhost']['credentials_file'] }}"
-    dest: "{{ default_app_credential_dir.dest }}/application_default_credentials.json"
+    src: "{{ credentials_file }}"
+    dest: "{{ default_app_credential_dir.path }}/application_default_credentials.json"
     mode: "0440"
     
 - name: Install stackdriver logging agent

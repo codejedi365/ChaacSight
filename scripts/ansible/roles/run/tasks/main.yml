@@ -1,3 +1,4 @@
 ---
 - name: Re-start rainfall-predictor
   service: name=rainfall-predictor state=restarted
+  when: app_autostart is not defined or app_autostart == true

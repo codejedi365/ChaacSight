@@ -9,3 +9,4 @@
 
 - name: Register app service to start on boot
   command: systemctl enable rainfall-predictor
+  when: app_autostart is not defined or app_autostart == true
