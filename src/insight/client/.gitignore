@@ -1,0 +1,10 @@
+## Chaac-Insight Client WebUI
+
+# Hide NodeJS elements
+node_modules/
+
+# Hide yarn elements (Zero-installs: False)
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+.pnp.*
