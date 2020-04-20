@@ -6,8 +6,9 @@
   become_user: root
   become_method: sudo
   roles:
-    - install
-    - configure
+    - role: install
+    - role: configure
+      user_secrets: "{{ hostvars['localhost']['pwhashes'] }}"
     
 - name: Deploy Rainfall Predictor app
   hosts: gce_instances_ips
@@ -15,4 +16,4 @@
   become_user: root
   become_method: sudo
   roles:
-    - run
+    - role: run

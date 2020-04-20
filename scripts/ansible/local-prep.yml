@@ -1,0 +1,32 @@
+---
+# local preparation
+- name: Load password hashes
+  hosts: local
+  gather_facts: True
+  tasks:
+    - name: Load password file
+      no_log: yes
+      include_vars:
+        file: etc_vars/secrets.yml
+        name: diary
+
+    - name: Hash all passwords
+      shell: "/usr/bin/echo {{ item.value | password_hash('sha512') }}"
+      become: False
+      no_log: True
+      register: hashactions
+      loop: "{{ diary | dict2items }}"
+
+    - name: Create pwhashes ansible_fact dictionary
+      set_fact:
+        pwhashes: "{{ (pwhashes|default({})) | combine({ item.item.key: item.stdout }) }}"
+      loop: "{{ hashactions.results }}"
+      no_log: True
+      when: item.rc == 0
+      
+    - debug:
+        verbosity: 3
+        msg: 
+          - "DEBUG: pwhashes = "
+          - "{{ pwhashes }}"
+

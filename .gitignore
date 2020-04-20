@@ -9,4 +9,3 @@ __pycache__/
 # Project Specific files
 bin
 build
-secrets.yml
