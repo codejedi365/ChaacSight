@@ -1,7 +1,10 @@
-.DS_Store
+## Chaac-Insight Client WebUI
+
+# Hide NodeJS elements
 node_modules
 /dist
 
+# Hide E2E outcomes
 /tests/e2e/videos/
 /tests/e2e/screenshots/
 
