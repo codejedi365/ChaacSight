@@ -21,6 +21,12 @@ routes.push({
     component: Home
 });
 
+// TEMPORARY (API over axios testing)
+routes.push({
+    path: "/ping",
+    name: "Ping",
+    component: () => import("@/components/PingPong.vue")
+});
 
 // Automatic route registration
 const requireRoute = require.context(".", false, /\w\.js$/);
