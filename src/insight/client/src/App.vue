@@ -1,13 +1,50 @@
 <template>
   <div id="app">
     <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link> |
-      <router-link to="/api">API Sample</router-link>
+      <router-link
+        v-for="(link, iLink) in sortedRouteLinks"
+        :key="iLink"
+        :to="link.path"
+        :class="iLink != 0 ? 'preSpacer' : ''"
+        >{{ link.text }}</router-link
+      >
     </div>
     <router-view />
   </div>
 </template>
+
+<script>
+import { default as features } from "@/utils/features";
+
+export default {
+    name: "App",
+    computed: {
+        routeLinks: function() {
+            return this.routes.filter(function(rt) {
+                return !(features["route"][rt.path] === false);
+            });
+        },
+        sortedRouteLinks: function() {
+            var lightest2Heaviest = (a, b) => {
+                return a.weight < b.weight ? -1 : a.weight > b.weight ? 1 : 0;
+            };
+            var sortedLinks = Array.from(this.routeLinks).sort(lightest2Heaviest);
+            return sortedLinks;
+        }
+    },
+    data() {
+        return {
+            features: features,
+            routes: [
+                // { path: "", text: "", hover: "", weight: 0, subroutes: null },
+                { path: "/", text: "Home", hover: "", weight: 0, subroutes: null },
+                { path: "/about", text: "About", hover: "", weight: 10, subroutes: null },
+                { path: "/data/import", text: "Import Data", hover: "", weight: 5, subroutes: null }
+            ]
+        };
+    }
+};
+</script>
 
 <style lang="scss">
 #app {
@@ -29,5 +66,8 @@
       color: #42b983;
     }
   }
+}
+.preSpacer::before {
+    content: " | ";
 }
 </style>
