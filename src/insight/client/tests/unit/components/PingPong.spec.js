@@ -29,19 +29,19 @@ describe("PingPong.vue", () => {
 
     // Component Contract
     it("submits request to API server when button is clicked", async () => {
-        sinonServer.respondWith("GET", [apiURL, "ping"].join("/"), "Pong")
-        assert.strictEqual(sinonServer.requests.length, 0, 'No request yet');
+        sinonServer.respondWith("GET", [apiURL, "ping"].join("/"), "Pong");
+        assert.strictEqual(sinonServer.requests.length, 0, "No request yet");
 
         const wrapper = shallowMount(PingPong);
         wrapper.get("div.button").trigger("click");
         await flushPromises();
 
-        assert.strictEqual(sinonServer.requests.length, 1, 'Only one request');
-		assert.strictEqual(sinonServer.requests[0].url, [apiURL, "ping"].join("/"), 'correct API URL');
+        assert.strictEqual(sinonServer.requests.length, 1, "Only one request");
+        assert.strictEqual(sinonServer.requests[0].url, [apiURL, "ping"].join("/"), "correct API URL");
     });
     it("stores API response message on success", async () => {
         const responseMsg = "Pong";
-        sinonServer.respondWith("GET", [apiURL, "ping"].join("/"), responseMsg)
+        sinonServer.respondWith("GET", [apiURL, "ping"].join("/"), responseMsg);
 
         const wrapper = shallowMount(PingPong);
         assert.notEqual(wrapper.vm.msg, responseMsg);
@@ -64,7 +64,7 @@ describe("PingPong.vue", () => {
         wrapper.get("div.button").trigger("click");
         await flushPromises();
 
-        assert.fail("Test 50% Implemented")
+        assert.fail("Test 50% Implemented");
         // assert.equal(wrapper.vm.??, 1, '1 error found');
     });
     /*
