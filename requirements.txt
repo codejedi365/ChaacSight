@@ -4,7 +4,7 @@ Cython==0.29.13
 https://github.com/lilfetz22/gmplot/archive/1.2.0-rainfall.zip  # gmplot
 ipywidgets==7.5.1
 joblib==0.13.2
-numpy==1.16.4
+numpy==1.22.0
 pandas==0.25.0
 patsy==0.5.1
 python-dateutil==2.8.0
