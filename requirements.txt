@@ -1,4 +1,4 @@
-certifi==2019.6.16
+certifi==2022.12.7
 common==0.1.2
 Cython==0.29.13
 https://github.com/lilfetz22/gmplot/archive/1.2.0-rainfall.zip  # gmplot
