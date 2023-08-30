@@ -27,6 +27,16 @@ explicit_run_cmd() {
     eval "$cmd"
 }
 
+# Function to update git submodules if exist
+update_git_submodules() {
+    if [ -f "$(get_project_dir || echo "../..")/.gitmodules" ]; then
+        if ! explicit_run_cmd "git submodule update --init --recursive"; then
+            error "ERROR: git submodule update failed."
+            return 1
+        fi
+    fi
+}
+
 # Function to check for modified pyproject.toml file in merged file list
 contains_pyprojecttoml_file() {
     # args: [file [file ...]]

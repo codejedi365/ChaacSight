@@ -30,7 +30,10 @@ if [ "$GIT_LFS_ENABLED" == "true" ]; then
     fi
 fi
 
-# [1] Get list of modified files post branch merge
+# [1] Update git submodules
+update_git_submodules || (exit 0)
+
+# [2] Get list of modified files post branch merge
 # derived from https://gist.github.com/taurus227/28960de89e6c43bb3d492125368f1224
 modified_files_in_merge="$(git diff-tree -r --name-only --diff-filter=M --no-commit-id ORIG_HEAD HEAD)"
 readonly modified_files_in_merge

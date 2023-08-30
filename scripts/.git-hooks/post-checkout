@@ -47,7 +47,10 @@ fi
 # [2] Verifying git's GPG configuration
 config_git_commit_signing
 
-# [3] Ensure dependencies are in sync with branch
+# [3] Update git submodules
+update_git_submodules || (exit 0)
+
+# [4] Ensure dependencies are in sync with branch
 # Only run if changing branches and not performing the initial `git clone`
 if [ "$CKOUT_TYPE_FLAG" = "1" ] && [ "$IS_CLONING" = "false" ]; then
     # Get list of different files between previous and new branch HEADs
