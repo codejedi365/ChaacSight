@@ -1,0 +1,39 @@
+#!/bin/sh
+# git-hook: commit-msg
+# --------------------------------------
+
+# shellcheck source=scripts/.git-hooks/_/husky.sh
+. "$(dirname "$0")/_/husky.sh"
+
+[ -z "$LOG_PREFIX" ] && LOG_PREFIX="[scripts/.git-hooks/commit-msg]"
+
+# shellcheck source=scripts/.git-hooks/hook-utils.sh
+. "$(dirname "$0")/hook-utils.sh"
+
+COMMIT_MSG_FILE="$1"
+
+printRetryMsg() {
+    # error "To retry: "
+    # error "  [1] With a manual edit, use the command: 'CZ_RETRY=true git commit'."
+    # error "  [2] From scratch with commitizen, use the command: 'git commit'."
+    # error "      WARNING: this will erase any previous cache or COMMIT_EDITMSG."
+}
+
+COMMITIZEN_EXE="$VIRTUAL_ENV/bin/cz"
+
+if ! [ -e "$COMMITIZEN_EXE" ]; then
+    error "ERROR: Unable to find commitizen cli"
+    error "WARNING: proceeding at risk."
+    exit 0
+fi
+
+if ! explicit_run_cmd "$COMMITIZEN_EXE check --commit-msg-file $COMMIT_MSG_FILE"; then
+    error "Sorry, try again and please adhere to conventional commit rules."
+    printRetryMsg
+    exit 1
+fi
+
+# env cleanup
+unset -v COMMIT_MSG_FILE COMMITIZEN_EXE
+unset -f printRetryMsg
+cleanup

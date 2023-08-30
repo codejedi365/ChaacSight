@@ -1,0 +1,32 @@
+[project]
+name = "chaacsight"
+dynamic = ["version"]
+dependencies = []
+
+[project.scripts]
+
+[build-system]
+requires = [
+    "setuptools ~= 68.0",
+    "setuptools_scm ~= 6.0",
+    "wheel ~= 0.37"
+]
+build-backend = "setuptools.build_meta"
+
+[project.optional-dependencies]
+build = [
+    "python-semantic-release"
+]
+test = [
+    "pytest",
+    "pytest-cov",
+    "pytest-timeout"
+]
+dev = [
+    "commitizen",
+    "mypy",
+    "pylint"
+]
+
+[tool.setuptools]
+

@@ -1,0 +1,64 @@
+#!/bin/sh
+# git-hook: post-rewrite
+# --------------------------------------
+
+# shellcheck source=scripts/.git-hooks/_/husky.sh
+. "$(dirname "$0")/_/husky.sh"
+
+CALLER_CMD="$1" # rebase || amend
+export LOG_PREFIX="[scripts/.git-hooks/post-rewrite]"
+
+# shellcheck source=scripts/.git-hooks/hook-utils.sh
+. "$(dirname "$0")/hook-utils.sh"
+
+env_cleanup() {
+    unset -v CALLER_CMD bkgd_pids
+    unset -f env_cleanup
+    cleanup
+}
+
+# --------------------------------------------
+# main
+# --------------------------------------------
+if ! [ "$CALLER_CMD" = "rebase" ]; then
+    unset -v CALLER_CMD
+    cleanup
+    exit 0
+fi
+
+log "DETECTED: git-rebase."
+
+# [1] Get list of modified files post branch rebase
+# derived from https://gist.github.com/taurus227/28960de89e6c43bb3d492125368f1224
+modified_files_in_rebase="$(git diff-tree -r --name-only --diff-filter=M --no-commit-id ORIG_HEAD HEAD)"
+readonly modified_files_in_rebase
+
+bkgd_pids=""
+
+# spawn dependency update processes (python)
+if contains_pyprojecttoml_file "$modified_files_in_rebase"; then
+    log "Python dependency requirements changed! This will take a few seconds..."
+    (update_python_deps) &
+    bkgd_pids="$bkgd_pids $!"
+fi
+
+if [ -n "$bkgd_pids" ]; then
+    # wait for deps manager processes to complete
+    overall_exitcode=0
+    for pid in $bkgd_pids; do
+        if ! wait "$pid"; then
+            overall_exitcode=1
+        fi
+    done
+
+    if ! [ $overall_exitcode -eq 0 ]; then
+        error "dependency environment...synchronization failed!"
+        env_cleanup
+        exit "$overall_exitcode"
+    fi
+
+    log "dependency environment...synchronized!"
+fi
+
+# env cleanup (vars, functions, utils)
+env_cleanup

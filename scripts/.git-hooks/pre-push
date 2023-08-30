@@ -1,0 +1,33 @@
+#!/bin/sh
+# git-hook: pre-push
+# --------------------------------------
+
+# shellcheck source=scripts/.git-hooks/_/husky.sh
+. "$(dirname "$0")/_/husky.sh"
+
+LOG_PREFIX="[scripts/.git-hooks/pre-push]"
+
+# shellcheck source=scripts/.git-hooks/hook-utils.sh
+. "$(dirname "$0")/hook-utils.sh"
+
+# GIT HOOK ARGV
+# ------------------------
+remote_origin_name="$1"
+# remote_origin_location="$2"
+
+# -----------------------------------------
+# main
+# -----------------------------------------
+if [ "$GIT_LFS_ENABLED" == "true" ]; then
+    # [1] handle Git LFS (handles binary files because per line changes are not desired)
+    if command -v git-lfs >/dev/null 2>&1; then
+        explicit_run_cmd "git lfs pre-push $*"
+    else
+        error "\nThis repository is configured for Git LFS but 'git-lfs' was not found on your path."
+        error "Please install to continue to use this repository!\n"
+        exit 2
+    fi
+fi
+
+# env cleanup
+cleanup

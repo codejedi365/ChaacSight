@@ -1,0 +1,64 @@
+#!/bin/sh
+# git-hook: post-merge
+# --------------------------------------
+
+# shellcheck source=scripts/.git-hooks/_/husky.sh
+. "$(dirname "$0")/_/husky.sh"
+
+[ -z "$LOG_PREFIX" ] && LOG_PREFIX="[.husky/post-merge]"
+
+# shellcheck source=scripts/.git-hooks/hook-utils.sh
+. "$(dirname "$0")/hook-utils.sh"
+
+env_cleanup() {
+    unset -v bkgd_pids overall_exitcode
+    unset -f env_cleanup
+    cleanup
+}
+
+# --------------------------------------------
+# main
+# --------------------------------------------
+if [ "$GIT_LFS_ENABLED" == "true" ]; then
+    # [0] handle Git LFS (handles binary files because per line changes are not desired)
+    if command -v git-lfs >/dev/null 2>&1; then
+        explicit_run_cmd "git lfs post-merge $*"
+    else
+        error "\nThis repository is configured for Git LFS but 'git-lfs' was not found on your path."
+        error "Please install to continue to use this repository!\n"
+        exit 2
+    fi
+fi
+
+# [1] Get list of modified files post branch merge
+# derived from https://gist.github.com/taurus227/28960de89e6c43bb3d492125368f1224
+modified_files_in_merge="$(git diff-tree -r --name-only --diff-filter=M --no-commit-id ORIG_HEAD HEAD)"
+readonly modified_files_in_merge
+
+bkgd_pids=""
+
+# spawn dependency update processes (python)
+if contains_pyprojecttoml_file "$modified_files_in_merge"; then
+    log "Python dependency requirements changed! This will take a few seconds..."
+    (update_python_deps) &
+    bkgd_pids="$bkgd_pids $!"
+fi
+
+# wait for deps manager processes to complete
+overall_exitcode=0
+for pid in $bkgd_pids; do
+    if ! wait "$pid"; then
+        overall_exitcode=1
+    fi
+done
+
+if ! [ $overall_exitcode -eq 0 ]; then
+    error "dependency environment...synchronization failed!"
+    env_cleanup
+    exit 1
+fi
+
+log "dependency environment...synchronized!"
+
+# [2] env cleanup (vars, functions, utils)
+env_cleanup

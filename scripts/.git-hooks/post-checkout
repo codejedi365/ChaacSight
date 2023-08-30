@@ -1,0 +1,87 @@
+#!/bin/sh
+# git-hook: post-checkout
+# --------------------------------------
+
+# shellcheck source=scripts/.git-hooks/_/husky.sh
+. "$(dirname "$0")/_/husky.sh"
+
+# shellcheck disable=SC2034
+LOG_PREFIX="[.husky/post-checkout]"
+
+# shellcheck source=scripts/.git-hooks/hook-utils.sh
+. "$(dirname "$0")/hook-utils.sh"
+
+HEAD_PREV="$1"
+HEAD_NEW="$2"
+CKOUT_TYPE_FLAG="$3" # 0 = retrieve file from index, 1 = changing branches
+IS_CLONING=false
+
+# check if this is a post-checkout after a `git clone`
+if [ -z "$HEAD_PREV" ]; then
+    IS_CLONING=true
+fi
+
+env_cleanup() {
+    unset -v HEAD_PREV HEAD_NEW CKOUT_TYPE_FLAG IS_CLONING bkgd_pids overall_exitcode
+    unset -f env_cleanup
+    cleanup
+}
+
+# -----------------------------------------
+# main
+# -----------------------------------------
+# [0] ensure project git config is included (for git-lfs config options)
+config_git_project_gitconfig
+
+if [ "$GIT_LFS_ENABLED" == "true" ]; then
+    # [1] handle Git LFS (handles binary files because per line changes are not desired)
+    if command -v git-lfs >/dev/null 2>&1; then
+        explicit_run_cmd "git lfs post-checkout $*"
+    else
+        error "\nThis repository is configured for Git LFS but 'git-lfs' was not found on your path."
+        error "Please install to continue to use this repository!\n"
+        exit 2
+    fi
+fi
+
+# [2] Verifying git's GPG configuration
+config_git_commit_signing
+
+# [3] Ensure dependencies are in sync with branch
+# Only run if changing branches and not performing the initial `git clone`
+if [ "$CKOUT_TYPE_FLAG" = "1" ] && [ "$IS_CLONING" = "false" ]; then
+    # Get list of different files between previous and new branch HEADs
+    # derived from https://gist.github.com/taurus227/28960de89e6c43bb3d492125368f1224
+    changed_files="$(git diff-tree -r --name-only --diff-filter=M --no-commit-id "$HEAD_PREV" "$HEAD_NEW")"
+    readonly changed_files
+
+    bkgd_pids=""
+
+    # spawn dependency update processes
+    if contains_pyprojecttoml_file "$changed_files"; then
+        log "Python dependency requirements changed! This will take a few seconds..."
+        (update_python_deps) &
+        bkgd_pids="$bkgd_pids $!"
+    fi
+
+    if [ -n "$bkgd_pids" ]; then
+        # wait for deps manager processes to complete
+        overall_exitcode=0
+        for pid in $bkgd_pids; do
+            if ! wait "$pid"; then
+                overall_exitcode=1
+            fi
+        done
+
+        if ! [ $overall_exitcode -eq 0 ]; then
+            error "dependency environment...synchronization failed!"
+            env_cleanup
+            exit 1
+        fi
+
+        log "dependency environment...synchronized!"
+    fi
+fi
+
+# env cleanup (vars, functions, utils)
+env_cleanup
