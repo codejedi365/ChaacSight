@@ -35,13 +35,12 @@ config_git_project_gitconfig
 
 if [ "$GIT_LFS_ENABLED" == "true" ]; then
     # [1] handle Git LFS (handles binary files because per line changes are not desired)
-    if command -v git-lfs >/dev/null 2>&1; then
-        explicit_run_cmd "git lfs post-checkout $*"
-    else
+    if ! command -v git-lfs >/dev/null 2>&1; then
         error "\nThis repository is configured for Git LFS but 'git-lfs' was not found on your path."
         error "Please install to continue to use this repository!\n"
         exit 2
     fi
+    explicit_run_cmd "git lfs post-checkout $*"
 fi
 
 # [2] Verifying git's GPG configuration
@@ -67,23 +66,14 @@ if [ "$CKOUT_TYPE_FLAG" = "1" ] && [ "$IS_CLONING" = "false" ]; then
         bkgd_pids="$bkgd_pids $!"
     fi
 
-    if [ -n "$bkgd_pids" ]; then
-        # wait for deps manager processes to complete
-        overall_exitcode=0
-        for pid in $bkgd_pids; do
-            if ! wait "$pid"; then
-                overall_exitcode=1
-            fi
-        done
-
-        if ! [ $overall_exitcode -eq 0 ]; then
-            error "dependency environment...synchronization failed!"
-            env_cleanup
-            exit 1
-        fi
-
-        log "dependency environment...synchronized!"
+    # wait for deps manager processes to complete
+    if ! wait_for_all_children "$bkgd_pids"; then
+        error "dependency environment...synchronization failed!"
+        env_cleanup
+        exit 1
     fi
+
+    log "dependency environment...synchronized!"
 fi
 
 # env cleanup (vars, functions, utils)

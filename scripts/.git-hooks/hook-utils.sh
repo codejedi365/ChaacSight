@@ -27,6 +27,24 @@ explicit_run_cmd() {
     eval "$cmd"
 }
 
+# Function to wait for all background processes to complete
+wait_for_all_children() {
+    bkgd_pids="$*"
+    if [ -n "$bkgd_pids" ]; then
+        overall_exitcode=0
+        for pid in $bkgd_pids; do
+            if ! wait "$pid"; then
+                overall_exitcode=1
+            fi
+        done
+        if ! [ $overall_exitcode -eq 0 ]; then
+            unset -v bkgd_pids overall_exitcode
+            return 1
+        fi
+    fi
+    unset -v bkgd_pids overall_exitcode
+}
+
 # Function to update git submodules if exist
 update_git_submodules() {
     if [ -f "$(get_project_dir || echo "../..")/.gitmodules" ]; then

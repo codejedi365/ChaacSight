@@ -28,12 +28,20 @@ if [ "$COMMIT_MSG_SOURCE" = "merge" ] ||
     exit 0
 fi
 
+COMMITIZEN_EXE="$VIRTUAL_ENV/bin/cz"
+
+if ! [ -e "$COMMITIZEN_EXE" ]; then
+    error "ERROR: Unable to find commitizen cli"
+    error "WARNING: proceeding at risk."
+    exit 0
+fi
+
 # Default
 # run as dry run to write to file only and exit with success (use as git hook)
 CZ_OPTIONS="--write-message-to-file $COMMIT_MSG_FILE --dry-run"
 
 # if [ "$CZ_RETRY" = "true" ]; then   # Currently not supported by py-commitizen due to no true backup
-#     CZ_OPTIONS="--retry"
+#     CZ_OPTIONS="$CZ_OPTIONS --retry"
 # elif ! exec </dev/tty; then
 if ! exec </dev/tty; then
     error "Unable to activate <stdin> for interactive shell for commitizen cli"
@@ -43,15 +51,11 @@ if ! exec </dev/tty; then
     exit 0
 fi
 
-if [ -e "$VIRTUAL_ENV/bin/cz" ]; then
-    COMMITIZEN_CMD="$VIRTUAL_ENV/bin/cz cz commit $CZ_OPTIONS"
+COMMITIZEN_CMD="$COMMITIZEN_EXE commit $CZ_OPTIONS"
 
-    log "Starting commitizen cli for conventional commits..."
-    explicit_run_cmd "${COMMITIZEN_CMD} || (exit 0)"
-    unset -v COMMIT_MSG_FILE COMMITIZEN_CMD
-else
-    error "ERROR: Unable to find commitizen cli"
-fi
+log "Starting commitizen cli for conventional commits..."
+
+explicit_run_cmd "${COMMITIZEN_CMD} || (exit 0)"
 
 # env cleanup (vars, functions, utils)
 unset -v COMMIT_MSG_FILE COMMIT_MSG_SOURCE CZ_OPTIONS

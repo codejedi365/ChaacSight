@@ -6,7 +6,7 @@
 . "$(dirname "$0")/_/husky.sh"
 
 # shellcheck disable=SC2034
-LOG_PREFIX="[.husky/post-commit]"
+LOG_PREFIX="[scripts/.git-hooks/post-commit]"
 
 # shellcheck source=scripts/.git-hooks/hook-utils.sh
 . "$(dirname "$0")/hook-utils.sh"
@@ -16,11 +16,10 @@ LOG_PREFIX="[.husky/post-commit]"
 # -----------------------------------------
 if [ "$GIT_LFS_ENABLED" == "true" ]; then
     # [0] handle Git LFS (handles binary files because per line changes are not desired)
-    if command -v git-lfs >/dev/null 2>&1; then
-        explicit_run_cmd "git lfs post-commit $*"
-    else
+    if ! command -v git-lfs >/dev/null 2>&1; then
         error "\nThis repository is configured for Git LFS but 'git-lfs' was not found on your path."
         error "Please install to continue to use this repository!\n"
         exit 2
     fi
+    explicit_run_cmd "git lfs post-commit $*"
 fi
